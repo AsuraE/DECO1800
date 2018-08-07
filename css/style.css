@@ -1,0 +1,26 @@
+h1 {
+	color: #aa3355;
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	height: 100%;
+}
+
+.infoWindow {
+	height: 100%;
+}
+
+.infoWindow img {
+	height: 540px;
+}
+
+.infoWindow p {
+	text-align: center;
+}
