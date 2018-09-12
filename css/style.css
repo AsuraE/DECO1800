@@ -10,7 +10,17 @@ html, body {
 }
 
 #map {
+	position: absolute;
+	left:18%; 
+	
 	height: 100%;
+	width:50%; 
+	padding:3em; 
+	margin:2em; 
+	border: black solid; 
+	float:center; 
+	
+	
 }
 
 .infoWindow {
