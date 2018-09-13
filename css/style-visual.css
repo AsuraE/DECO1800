@@ -4,9 +4,9 @@
 }
 
 /*Font style*/ 
-body {
+body, h1 {
 	font-family: 'Fredoka One', cursive;
-	color: #3E1B14;
+	color: #723A27;
 }
 
 p {
