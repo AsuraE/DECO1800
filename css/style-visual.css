@@ -3,6 +3,14 @@
 	padding:0
 }
 
+/*Font style*/ 
+body {
+	font-family: 'Fredoka One', cursive;
+}
+
+p {
+	font-family: 'Patrick Hand', cursive;
+}
 
 /*Main Menu Home Page */
 
