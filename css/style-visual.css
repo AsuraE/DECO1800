@@ -136,11 +136,15 @@
 	margin-top: 5em;
 }
 
+#thisLang {
+	font-family: Fredoka one, Patrick Hand, cursive;
+}
+
 /*Main menu home page */
 #main-menu ul {
-	display:flex; 
-	justify-content:center; 
-	text-align:left; 
+	display:flex;
+	justify-content:center;
+	text-align:left;
 	display:flex;
 	justify-content:center;
 	text-align:left;
