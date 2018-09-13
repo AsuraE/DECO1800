@@ -18,11 +18,8 @@ body, #main-menu, #languages h1 {
 }
 
 /*Logo*/
-#logo {
-	background-color: #ffffff;
-	background: url(images/logo.jpg);
-	background-repeat: no-repeat;
-	background-position: left center;
+#logo img{
+	margin-left: 0;
 }
 /*Main Menu Home Page */
 
