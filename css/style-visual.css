@@ -16,6 +16,14 @@ body, #main-menu, #languages h1 {
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
 }
+
+/*Logo*/
+#logo {
+	background-color: #ffffff;
+	background: url(images/logo.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
 /*Main Menu Home Page */
 
 #main-menu {
