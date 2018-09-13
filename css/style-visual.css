@@ -6,7 +6,7 @@
 
 
 
-/*Font style*/ 
+/*Font style for all*/ 
 body, #main-menu, #languages h1 {
 	font-family: 'Fredoka One', sans-serif, cursive;
 	color: #723A27;
@@ -14,7 +14,7 @@ body, #main-menu, #languages h1 {
 
 #thislang h2, #thislang h3 {
 	font-family: 'Patrick Hand', sans-serif, cursive;
-	color: #723A27;
+	color: #3E1B14;
 }
 /*Main Menu Home Page */
 
@@ -131,7 +131,7 @@ body, #main-menu, #languages h1 {
 }
 
 #vl {
-	border: 2px black solid;
+	border: 2px #3E1B14 solid;
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
@@ -144,10 +144,6 @@ body, #main-menu, #languages h1 {
 #communities {
 	display: block;
 	margin-top: 5em;
-}
-
-#thisLang {
-	font-family: 'Fredoka One', 'Patrick Hand', cursive;
 }
 
 /*Main menu home page */
