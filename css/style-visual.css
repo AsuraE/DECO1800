@@ -1,18 +1,18 @@
 *{
 	margin:0;
-	padding:0
+	padding:0;
 }
 
-}
 
-}
+
+
 /*Font style*/ 
-body, h1 {
+body, #main-menu, #languages h1 {
 	font-family: 'Fredoka One', sans-serif, cursive;
 	color: #723A27;
 }
 
-h2,h3 {
+#thislang h2, #thislang h3 {
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #723A27;
 }
@@ -55,7 +55,7 @@ h2,h3 {
 
 }
 
-	#signin a {
+#signin a {
 	display:inline-block;
 	float:right;
 	clear:both;
@@ -98,6 +98,7 @@ h2,h3 {
 
 
 	@media only screen and (min-width:800px) {
+	}
 
 /*single language page*/
 
@@ -159,4 +160,4 @@ h2,h3 {
 	text-align:left;
 }
 
-}
+
