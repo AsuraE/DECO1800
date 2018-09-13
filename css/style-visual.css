@@ -20,6 +20,8 @@ body, #main-menu, #languages h1 {
 /*Logo*/
 #logo img{
 	margin-left: 0;
+	width: 50%;
+	padding: 10px;
 }
 /*Main Menu Home Page */
 
