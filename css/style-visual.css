@@ -6,14 +6,14 @@
 
 
 
-/*Font style for all*/ 
+/*Font style for all*/
 body, #main-menu, #languages h1 {
 	font-family: 'Fredoka One', sans-serif, cursive;
 	color: #723A27;
 }
 
 body {
-	background-color: #BBA084; 
+	background-color: #BBA084;
 }
 
 #thislang h2, #thislang h3 {
@@ -137,7 +137,7 @@ body {
 	margin-top: 2em;
 }
 
-#langGames div {
+#langGames button {
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
@@ -158,6 +158,53 @@ body {
 	margin-top: 5em;
 }
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.bodyContent {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*Main menu home page */
 #main-menu ul {
 	display:flex;
@@ -167,5 +214,3 @@ body {
 	justify-content:center;
 	text-align:left;
 }
-
-

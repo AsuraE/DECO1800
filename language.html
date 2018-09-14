@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/style-visual.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand" rel="stylesheet">
-  	<script src="js/language.js"></script>
   </head>
 
   <body>
@@ -47,7 +46,19 @@
         <h3 id="hello">Hello <br> Indigenous equvalent <br> Pronunciation</h3>
 
         <!--Word list pop-up-->
-        <button type="button" class="btn btn-danger">Word List</button>
+        <button type="button" class="btn btn-danger" id="wordList">
+          <p>Word List</p>
+        </button>
+
+        <div id="wlModal" class="modal">
+
+          <div class="bodyContent">
+            <span class="close">&times;</span>
+            <p>Word List</p>
+          </div>
+
+        </div>
+
 
         <a href="#" id="communities">Communities</a>
       </div>
@@ -61,18 +72,45 @@
         <div id="interaction">
 
           <!--Body pop-up-->
-          <div id="bodyPart">
-            <button type="button" class="btn btn-danger btn-block">Body part</button>
+            <button type="button" class="btn btn-danger btn-block" id="bodyButton">
+              Body part
+            </button>
+
+          <div id="bodyModal" class="modal">
+
+            <div class="bodyContent">
+              <span class="close">&times;</span>
+              <p>body img part</p>
+            </div>
+
           </div>
 
           <!--Memory game pop-up-->
-          <div id="memGame">
-            <button type="button" class="btn btn-danger btn-block">Memory Game</button>
+            <button type="button" class="btn btn-danger btn-block" id="memButton">
+              Memory Game
+            </button>
+
+          <div id="memModal" class="modal">
+
+            <div class="bodyContent">
+              <span class="close">&times;</span>
+              <p>memory game</p>
+            </div>
+
           </div>
 
           <!--Quiz pop-up-->
-          <div id="quiz">
-            <button type="button" class="btn btn-danger btn-block">Quiz</button>
+            <button type="button" class="btn btn-danger btn-block" id="quizButton">
+              Quiz
+            </button>
+
+          <div id="quizModal" class="modal">
+
+            <div class="bodyContent">
+              <span class="close">&times;</span>
+              <p>quiz</p>
+            </div>
+
           </div>
 
         </div>
@@ -80,5 +118,5 @@
     </div>
 
   </body>
-
+<script src="js/language.js"></script>
 </html>
