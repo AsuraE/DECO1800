@@ -12,7 +12,7 @@ body, #main-menu, #languages h1 {
 	color: #723A27;
 }
 
-body {
+body, #lang-ind {
 	background-color: #BBA084;
 }
 
