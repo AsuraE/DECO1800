@@ -12,6 +12,10 @@ body, #main-menu, #languages h1 {
 	color: #723A27;
 }
 
+body {
+	background-color: #BBA084; 
+}
+
 #thislang h2, #thislang h3 {
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
