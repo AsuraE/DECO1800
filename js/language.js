@@ -1,34 +1,21 @@
-function modalFunc(modalName, modalButton) {
-
-  // Get the modal
-  var modal = document.getElementById(modalName);
-
-  // Get the button that opens the modal
-  var btn = document.getElementById(modalButton);
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks on the button, open the modal
-  btn.onclick = function() {
-      modal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
+/**
+  *  Sets the specified modal to be displayed.
+  *  Adds in event listener for clicking off modal to close it.
+  */
+function modalOpen(modalName) {
+  modal = document.getElementById(modalName);
+  modal.style.display = "block";
+  
   window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
   }
-
 }
 
-modalFunc('wlModal', 'wordList');
-modalFunc('bodyModal', 'bodyButton');
-modalFunc('memModal', 'memButton');
-modalFunc('quizModal', 'quizButton');
+/**
+  * Sets the specified modal to be hidden.
+  */
+function modalClose(modalName) {
+  document.getElementById(modalName).style.display = "none";
+}

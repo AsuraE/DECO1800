@@ -46,14 +46,14 @@
         <h3 id="hello">Hello <br> Indigenous equvalent <br> Pronunciation</h3>
 
         <!--Word list pop-up-->
-        <button type="button" class="btn btn-danger" id="wordList">
+        <button type="button" class="btn btn-danger" id="wordList" onclick="modalOpen('wlModal')">
           <p>Word List</p>
         </button>
 
         <div id="wlModal" class="modal">
 
           <div class="bodyContent">
-            <span class="close">&times;</span>
+            <span class="close" onclick="modalClose('wlModal')">&times;</span>
             <p>Word List</p>
           </div>
 
@@ -72,42 +72,42 @@
         <div id="interaction">
 
           <!--Body pop-up-->
-            <button type="button" class="btn btn-danger btn-block" id="bodyButton">
+            <button type="button" class="btn btn-danger btn-block" id="bodyButton" onclick="modalOpen('bodyModal')">
               Body part
             </button>
 
           <div id="bodyModal" class="modal">
 
             <div class="bodyContent">
-              <span class="close">&times;</span>
+              <span class="close" onclick="modalClose('bodyModal')">&times;</span>
               <p>body img part</p>
             </div>
 
           </div>
 
           <!--Memory game pop-up-->
-            <button type="button" class="btn btn-danger btn-block" id="memButton">
+            <button type="button" class="btn btn-danger btn-block" id="memButton" onclick="modalOpen('memModal')">
               Memory Game
             </button>
 
           <div id="memModal" class="modal">
 
             <div class="bodyContent">
-              <span class="close">&times;</span>
+              <span class="close" onclick="modalClose('memModal')">&times;</span>
               <p>memory game</p>
             </div>
 
           </div>
 
           <!--Quiz pop-up-->
-            <button type="button" class="btn btn-danger btn-block" id="quizButton">
+            <button type="button" class="btn btn-danger btn-block" id="quizButton" onclick="modalOpen('quizModal')">
               Quiz
             </button>
 
           <div id="quizModal" class="modal">
 
             <div class="bodyContent">
-              <span class="close">&times;</span>
+              <span class="close" onclick="modalClose('quizModal')">&times;</span>
               <p>quiz</p>
             </div>
 
