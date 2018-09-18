@@ -47,7 +47,7 @@ function get_resource_ids()
 */
 function parse_datasets(resource_ids_map)
 {
-    var baseurl = "http://data.gov.au/api/action/datastore_search";
+    var baseurl = "https://data.gov.au/api/action/datastore_search";
     var parsed_data_map = new Object();
 
     $.each(resource_ids_map, function(language_name, resource_id) {
@@ -66,7 +66,7 @@ function parse_datasets(resource_ids_map)
             });
             // console.log("Language: " + language_name + ". Map: " + JSON.stringify(language_map));
             parsed_data_map[language_name] = language_map;  
-            var html = '<div><h1>' + language_name + '</h1><img src="images/language.jpg" alt="language" height=150px width=200px></div>';
+            var html = '<div><h1>' + language_name + '</h1><a href=\'language.html\'><img src="images/language.jpg" alt="language" height=150px width=200px></div>';
             document.getElementById('languages').innerHTML += html;
         }
         });
