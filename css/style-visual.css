@@ -101,6 +101,7 @@ body, #lang-ind {
 	margin-right:2em;
 	background-color:#8F2F23;
 	width: 10%;
+	border-radius: 8px; 
 }
 
 
@@ -160,6 +161,7 @@ body, #lang-ind {
 	margin-top: 2em;
 	width:30%; 
 	background-color:#8F2F23; 
+	border:#8F2F23; 
 }
 
 #langGames button {
@@ -167,6 +169,7 @@ body, #lang-ind {
 	margin-bottom: 2em;
 	width:100%; 
 	background-color:#8F2F23; 
+	border:#8F2F23; 
 }
 
 #vl {
