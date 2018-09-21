@@ -7,9 +7,16 @@
 
 
 /*Font style for all*/
-body, #main-menu, #languages h1 {
+body, #main-menu {
 	font-family: 'Fredoka One', sans-serif, cursive;
 	color: #723A27;
+}
+
+h1, h2, h3 {
+	font-family: 'Patrick Hand', cursive;
+	color: #8F2F23; 
+	font-weight:bold; 
+	
 }
 
 body, #lang-ind {
@@ -39,8 +46,12 @@ body, #lang-ind {
 }
 
 #main-menu ul{
-	padding:2em;
+	padding:0.5em;
 	text-align:center;
+	border-top-style: ridge; 
+	border-top-width: 3px; 
+	border-bottom-style:ridge; 
+	border-bottom-width: 3px; 
 
 }
 
@@ -58,6 +69,18 @@ body, #lang-ind {
 	padding: 0.5em 1.2em;
 	text-shadow:rgba(0,0,0,0.5) 0 1px 0;
 	transition:background 1.5s;
+	font-size: 22px; 
+}
+
+#main-menu a:hover {
+	background:#8F2F23; 
+	color:white; 
+	
+}
+
+#main-menu li.current a {
+	font-weight:bold; 
+	text-decoration:underline;
 }
 
 
@@ -135,14 +158,19 @@ body, #lang-ind {
 
 #langMain button {
 	margin-top: 2em;
+	width:30%; 
+	background-color:#8F2F23; 
 }
 
 #langGames button {
 	margin-top: 2em;
 	margin-bottom: 2em;
+	width:100%; 
+	background-color:#8F2F23; 
 }
 
 #vl {
+	
 	border: 2px #3E1B14 solid;
 	margin-top: 2em;
 	margin-bottom: 2em;
