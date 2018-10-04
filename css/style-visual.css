@@ -163,11 +163,11 @@ body, #lang-ind {
 
 
 #interaction button {
-	margin-top: 2em;
+	/*margin-top: 2em;
 	margin-bottom: 2em;
 	padding: 3em; 
-	width:25%;
-	background-color:#8F2F23; 
+	width:25%;*/
+	background-color:#723A27
 	border:#8F2F23;
 }
 
