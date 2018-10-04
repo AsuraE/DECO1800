@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<title>DreamTime - Learn</title>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-visual.css"> 
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+	<script src="js/map.js"></script>	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHeXB1EoUq362BKu9flVUup0snRMTtMw8&callback=initMap" async defer></script>
+    
+</head>
+
+
+<body id="learn">
+
+
+	<section id="logo">
+		<img src="images/logo.png" alt="The logo goes here"> 
+	</section> 
+	
+	<nav id="main-menu">
+				
+		<ul>
+			<li> 
+				<a href="index.html"> Home </a>						
+			</li>
+			<li> 
+				<a href="Languages_landing.html"> Language </a>						
+			</li>
+			<li class="current"> 
+				<a href="Learn.html"> Learn </a>					
+			</li>
+			<li> 
+				<a href='#'> About Us </a> 					
+			</li>
+		
+												
+					
+		</ul> 
+					
+								
+	</nav>
+	
+	<div id="interaction">
+
+          <!--Body pop-up-->
+		  
+		<div id="gamebuttons"> 
+		  
+			<button type="button" class="btn btn-danger btn-block" id="bodyButton" onclick="modalOpen('bodyModal')">
+			Body part
+			</button>
+			
+			<button type="button" class="btn btn-danger btn-block" id="memButton" onclick="modalOpen('memModal')">
+             Memory Game
+            </button>
+			
+			
+			<button type="button" class="btn btn-danger btn-block" id="quizButton" onclick="modalOpen('quizModal')">
+             Quiz
+            </button> 
+			
+		</div> 
+
+          <div id="bodyModal" class="modal">
+		  
+		 
+		 
+
+            <div class="bodyContent">
+              <span class="close" onclick="modalClose('bodyModal')">&times;</span>
+              <p>body img part</p>
+              <img src="images/base.jpg" id="figure">
+            </div>
+
+          </div>
+
+          <!--Memory game pop-up-->
+            
+		
+
+          <div id="memModal" class="modal">
+		  
+		
+
+            <div class="bodyContent">
+              <span class="close" onclick="modalClose('memModal')">&times;</span>
+              <p>memory game</p>
+            </div>
+
+          </div>
+
+          <!--Quiz pop-up-->
+			  
+
+          <div id="quizModal" class="modal">
+			
+		  
+		  
+            <div class="bodyContent">
+              <span class="close" onclick="modalClose('quizModal')">&times;</span>
+              <p>quiz</p>
+            </div>
+
+          </div>
+
+        </div>
+	
+
+</body> 
+<script src="js/language.js"></script>
+
+
+</html> 

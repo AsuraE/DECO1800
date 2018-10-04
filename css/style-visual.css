@@ -110,7 +110,7 @@ body, #lang-ind {
 #languages {
 	display:flex;
 	flex-wrap: wrap;
-	margin-left:8%;
+	justify-content:center; 
 
 
 }
@@ -138,19 +138,7 @@ body, #lang-ind {
 /*single language page*/
 
 #thisLang {
-	display: flex;
-	margin-left: 5em;
-	margin-right: 5em;
-	text-align: center;
-	color: #3E1B14;
-}
-
-#langMain {
-	width: 50%;
-}
-
-#langGames {
-	width: 50%;
+	margin:1em; 
 }
 
 #langName {
@@ -164,27 +152,27 @@ body, #lang-ind {
 	border:#8F2F23; 
 }
 
-#langGames button {
+/*Learn page*/ 
+
+#learn #gamebuttons {
+	display: flex; 
+	justify-content:space-between; 
+	text-align:center; 
+	padding:5em; 
+}
+
+
+#interaction button {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	width:100%; 
+	padding: 3em; 
+	width:25%;
 	background-color:#8F2F23; 
-	border:#8F2F23; 
+	border:#8F2F23;
 }
 
-#vl {
-	
-	border: 2px #3E1B14 solid;
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
 
-#interaction {
-	margin: auto;
-	width: 25%;
-}
-
-#communities {
+#learn {
 	display: block;
 	margin-top: 5em;
 }
