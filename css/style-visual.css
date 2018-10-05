@@ -138,7 +138,12 @@ body, #lang-ind {
 /*single language page*/
 
 #thisLang {
+	display:flex; 
 	margin:1em;
+}
+
+#thisLang div {
+	width:50%;
 }
 
 #langName {
