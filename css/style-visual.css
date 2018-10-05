@@ -69,18 +69,19 @@ body, #lang-ind {
 	padding: 0.5em 1.2em;
 	text-shadow:rgba(0,0,0,0.5) 0 1px 0;
 	transition:background 1.5s;
-	font-size: 22px; 
+	font-size: 32px; 
 }
 
 #main-menu a:hover {
-	background:#8F2F23; 
-	color:white; 
+	/*background:#8F2F23; */
+	color:#8F2F23; 
 	
 }
 
 #main-menu li.current a {
 	font-weight:bold; 
-	text-decoration:underline;
+	color:#8F2F23;
+	
 }
 
 
