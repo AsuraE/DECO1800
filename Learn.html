@@ -2,13 +2,13 @@
 <html>
 <title>DreamTime - Learn</title>
 <head>
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/style-visual.css"> 
+	<link rel="stylesheet" href="css/style-visual.css">
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-	<script src="js/map.js"></script>	
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHeXB1EoUq362BKu9flVUup0snRMTtMw8&callback=initMap" async defer></script>
-    
+	<script src="js/language.js"></script>
+
 </head>
 
 
@@ -16,65 +16,54 @@
 
 
 	<section id="logo">
-		<img src="images/logo.png" alt="The logo goes here"> 
-	</section> 
-	
+		<img src="images/logo.png" alt="The logo goes here">
+	</section>
+
 	<nav id="main-menu">
-				
+
 		<ul>
-			<li> 
-				<a href="index.html"> Home </a>						
+			<li>
+				<a href="index.html"> Home </a>
 			</li>
-			<li> 
-				<a href="Languages_landing.html"> Language </a>						
+			<li>
+				<a href="Languages_landing.html"> Language </a>
 			</li>
-			<li class="current"> 
-				<a href="Learn.html"> Learn </a>					
+			<li class="current">
+				<a href="Learn.html"> Learn </a>
 			</li>
-			<li> 
-				<a href='#'> About Us </a> 					
+			<li>
+				<a href='#'> About Us </a>
 			</li>
-		
-												
-					
-		</ul> 
-					
-								
+
+
+
+		</ul>
+
+
 	</nav>
-	
+
 	<div id="interaction">
 
           <!--Body pop-up-->
-		  
-		<div id="gamebuttons"> 
-		
-		
-				
-				<button type="button" class="btn btn-danger btn-block" id="bodyButton" onclick="modalOpen('bodyModal')">
-				<img src="images/body.jpg" width=300px height=300px>  
+
+		<div id="gamebuttons">
+
+				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal')">
+				<img src="images/body.jpg" width=300px height=300px>
 				</button>
-			
-			
-			
-				<button type="button" class="btn btn-danger btn-block" id="memButton" onclick="modalOpen('memModal')">
-				
+
+				<button type="button" id="memButton" onclick="modalOpen('memModal')">
+
 				<img src="images/animals.jpg" width=300px height=300px>
 				</button>
-		 
-			
-			
-		 
-				<button type="button" class="btn btn-danger btn-block" id="quizButton" onclick="modalOpen('quizModal')">
+
+				<button type="button" id="quizButton" onclick="modalOpen('quizModal')">
 				 <img src="images/quizz.jpg" width=300px height=300px>
-				</button> 
-			 
-			
-		</div> 
+				</button>
+
+		</div>
 
           <div id="bodyModal" class="modal">
-		  
-		 
-		 
 
             <div class="bodyContent">
               <span class="close" onclick="modalClose('bodyModal')">&times;</span>
@@ -85,12 +74,8 @@
           </div>
 
           <!--Memory game pop-up-->
-            
-		
 
           <div id="memModal" class="modal">
-		  
-		
 
             <div class="bodyContent">
               <span class="close" onclick="modalClose('memModal')">&times;</span>
@@ -100,24 +85,67 @@
           </div>
 
           <!--Quiz pop-up-->
-			  
-
           <div id="quizModal" class="modal">
-			
-		  
-		  
+
             <div class="bodyContent">
+
               <span class="close" onclick="modalClose('quizModal')">&times;</span>
-              <p>quiz</p>
+
+						<div id="start">
+							<p>Test your vocabulary</p>
+							<br>
+							<p id="quizName">Language name</p>
+
+							<div id="selectLang">
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+							</div>
+						</div>
+
+							<div id="quiz">
+
+								<img src="./images/animals.jpg" width="250px" height="250px">
+								<p>English name</p>
+								<p>Choose the correct indigenous word</p>
+
+								<form>
+										<input type="radio" name="option1" value="option1">option1<br>
+										<input type="radio" name="option2" value="option2">option2<br>
+										<input type="radio" name="option3" value="option3">option3<br>
+										<input type="radio" name="option4" value="option4">option4<br>
+								</form>
+
+								<button type="button" class="btn btn-danger btn-block" id="nextQuestion">
+									Next question
+								</button>
+
+								<button type="button" class="btn btn-danger btn-block" id="finish">
+									Finish
+								</button>
+							</div>
+
             </div>
 
           </div>
 
         </div>
-	
-
-</body> 
-<script src="js/language.js"></script>
 
 
-</html> 
+</body>
+
+</html>
