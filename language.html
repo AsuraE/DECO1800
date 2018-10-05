@@ -4,32 +4,30 @@
 
   <title>Language</title>
   <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+  	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-visual.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-	<script src="js/map.js"></script>	
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHeXB1EoUq362BKu9flVUup0snRMTtMw8&callback=initMap" async defer></script>
+  	<script src="js/bootstrap.min.js"></script>
   </head>
 
-  <body id="lang-ind">
+  <body>
 
     <section id="logo">
-					<img src="images/logo.png" alt="The logo goes here">
+					<img src="images/logo.jpg" alt="The logo goes here">
 		</section>
 
     <nav id="main-menu">
 
       <ul>
-        <li>
+        <li class="current">
           <a href="index.html"> Home </a>
         </li>
         <li>
           <a href="Languages_landing.html"> Language </a>
         </li>
         <li>
-          <a href="Learn.html"> Learn </a>
+          <a href='#'> Communities </a>
         </li>
         <li>
           <a href='#'> About Us </a>
@@ -40,12 +38,6 @@
   </nav>
 
     <div id="thisLang">
-	
-		
-	<div id="map">
-	<h1>Indigenous Language Map of Queensland</h1>
-	</div>
-	
       <div id="langMain">
 
         <!--language name-->
@@ -55,27 +47,61 @@
         <h3 id="hello">Hello <br> Indigenous equvalent <br> Pronunciation</h3>
 
         <!--Word list pop-up-->
-        <button type="button" class="btn btn-danger" id="wordList" onclick="modalOpen('wlModal')">
-          <p>Word List</p>
-        </button>
+        <button type="button" class="btn btn-danger">Word List</button>
 
-        <div id="wlModal" class="modal">
+        <a href="#" id="communities">Communities</a>
+      </div>
 
-          <div class="bodyContent">
-            <span class="close" onclick="modalClose('wlModal')">&times;</span>
-            <p>Word List</p>
+      <div id="vl"></div>
+
+      <div id="langGames">
+
+        <h2>Learn</h2>
+
+        <div id="interaction">
+
+          <!--Body pop-up-->
+          <div id="bodyPart">
+            <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#exampleModal">
+              Body part
+            </button>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Memory game pop-up-->
+          <div id="memGame">
+            <button type="button" class="btn btn-danger btn-block">Memory Game</button>
+          </div>
+
+          <!--Quiz pop-up-->
+          <div id="quiz">
+            <button type="button" class="btn btn-danger btn-block">Quiz</button>
           </div>
 
         </div>
-
-
       </div>
-
-    
-
-      
     </div>
 
   </body>
-<script src="js/language.js"></script>
+
 </html>
