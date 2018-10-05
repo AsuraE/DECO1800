@@ -14,9 +14,9 @@ body, #main-menu {
 
 h1, h2, h3 {
 	font-family: 'Patrick Hand', cursive;
-	color: #8F2F23; 
-	font-weight:bold; 
-	
+	color: #8F2F23;
+	font-weight:bold;
+
 }
 
 body, #lang-ind {
@@ -48,10 +48,10 @@ body, #lang-ind {
 #main-menu ul{
 	padding:0.5em;
 	text-align:center;
-	border-top-style: ridge; 
-	border-top-width: 3px; 
-	border-bottom-style:ridge; 
-	border-bottom-width: 3px; 
+	border-top-style: ridge;
+	border-top-width: 3px;
+	border-bottom-style:ridge;
+	border-bottom-width: 3px;
 
 }
 
@@ -69,17 +69,17 @@ body, #lang-ind {
 	padding: 0.5em 1.2em;
 	text-shadow:rgba(0,0,0,0.5) 0 1px 0;
 	transition:background 1.5s;
-	font-size: 22px; 
+	font-size: 22px;
 }
 
 #main-menu a:hover {
-	background:#8F2F23; 
-	color:white; 
-	
+	background:#8F2F23;
+	color:white;
+
 }
 
 #main-menu li.current a {
-	font-weight:bold; 
+	font-weight:bold;
 	text-decoration:underline;
 }
 
@@ -101,7 +101,7 @@ body, #lang-ind {
 	margin-right:2em;
 	background-color:#8F2F23;
 	width: 10%;
-	border-radius: 8px; 
+	border-radius: 8px;
 }
 
 
@@ -110,7 +110,7 @@ body, #lang-ind {
 #languages {
 	display:flex;
 	flex-wrap: wrap;
-	justify-content:center; 
+	justify-content:center;
 
 
 }
@@ -138,7 +138,7 @@ body, #lang-ind {
 /*single language page*/
 
 #thisLang {
-	margin:1em; 
+	margin:1em;
 }
 
 #langName {
@@ -147,25 +147,25 @@ body, #lang-ind {
 
 #langMain button {
 	margin-top: 2em;
-	width:30%; 
-	background-color:#8F2F23; 
-	border:#8F2F23; 
+	width:30%;
+	background-color:#8F2F23;
+	border:#8F2F23;
 }
 
-/*Learn page*/ 
+/*Learn page*/
 
 #learn #gamebuttons {
-	display: flex; 
-	justify-content:space-between; 
-	text-align:center; 
-	padding:5em; 
+	display: flex;
+	justify-content:space-between;
+	text-align:center;
+	padding:5em;
 }
 
 
 #interaction button {
 	/*margin-top: 2em;
 	margin-bottom: 2em;
-	padding: 3em; 
+	padding: 3em;
 	width:25%;*/
 	background-color:#723A27
 	border:#8F2F23;
@@ -201,7 +201,34 @@ body, #lang-ind {
   height: 80%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	animation-name: animatetop;
-	animation-duration: 0.4s
+	animation-duration: 0.4s;
+	text-align: center;
+}
+
+#start p {
+	margin-top: 2%;
+}
+
+#startQuiz {
+	width: 30%;
+	margin: auto;
+}
+
+#quiz {
+	display: none;
+}
+
+#quiz button {
+	width: 30%;
+	margin: auto;
+}
+
+#quiz form {
+	margin: 2% auto;
+}
+
+#finish {
+	display: none;
 }
 
 /* Add Animation */
