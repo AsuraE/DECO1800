@@ -26,9 +26,16 @@ function modalClose(modalName) {
   quiz stuff
 */
 
+//// TODO: add animations, make quiz smoother
+
 var questions = [{
   /*
+    dummy questions
+  */
+  /*
   {
+    question format
+
     image: ,
     engWord,
     choices[String] ,
@@ -58,6 +65,9 @@ var questions = [{
 
 var questionCounter = 0;
 
+/*
+start quiz
+*/
 function startQuiz() {
   document.getElementById("quiz").style.display="block";
   document.getElementById("quiz").style.visibility="visible";
@@ -65,6 +75,9 @@ function startQuiz() {
   createQuiz(questionCounter);
 }
 
+/*
+advance to the next question
+*/
 function advanceQuiz() {
   questionCounter += 1;
   if (questionCounter == questions.length) {
@@ -76,27 +89,32 @@ function advanceQuiz() {
   }
 }
 
+/*
+create questions for quiz
+
+index(int): question index
+*/
 function createQuiz(index) {
 
-document.getElementById("engWord").innerHTML = questions[index].question;
+  document.getElementById("engWord").innerHTML = questions[index].question;
 
-var col1 = document.getElementById("col1");
-var col2 = document.getElementById("col2");
+  var col1 = document.getElementById("col1");
+  var col2 = document.getElementById("col2");
 
-if (col1.innerHTML != "" && col2.innerHTML != "") {
-  col1.innerHTML = "";
-  col2.innerHTML = "";
-}
+  if (col1.innerHTML != "" && col2.innerHTML != "") {
+    col1.innerHTML = "";
+    col2.innerHTML = "";
+  }
 
- for (var i = 0; i < questions[index].choices.length; i++) {
+   for (var i = 0; i < questions[index].choices.length; i++) {
 
-  var choice = '<input type="radio" name="answer" value=' + i + ' />';
-  choice += questions[index].choices[i] + "<br>";
+    var choice = '<input type="radio" name="answer" value=' + i + ' />';
+    choice += questions[index].choices[i] + "<br>";
 
-  if (i+1 <= 2)
-    document.getElementById("col1").innerHTML += choice;
-  else
-    document.getElementById("col2").innerHTML += choice;
- }
+    if (i+1 <= 2)
+      document.getElementById("col1").innerHTML += choice;
+    else
+      document.getElementById("col2").innerHTML += choice;
+   }
 
 }
