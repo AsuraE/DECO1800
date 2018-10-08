@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<title>DreamTime - Learn</title>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-visual.css">
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+
+</head>
+
+
+<body id="learn">
+
+
+	<section id="logo">
+		<img src="images/logo.png" alt="The logo goes here">
+	</section>
+
+	<nav id="main-menu">
+
+		<ul>
+			<li>
+				<a href="index.html"> Home </a>
+			</li>
+			<li>
+				<a href="Languages_landing.html"> Language </a>
+			</li>
+			<li class="current">
+				<a href="Learn.html"> Learn </a>
+			</li>
+			<li>
+				<a href='#'> About Us </a>
+			</li>
+
+
+
+		</ul>
+
+
+	</nav>
+
+	<div id="interaction">
+
+          <!--Body pop-up-->
+
+		<div id="gamebuttons">
+
+				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal')">
+				<img src="images/body.jpg" width=300px height=300px>
+				</button>
+
+				<button type="button" id="memButton" onclick="modalOpen('memModal')">
+
+				<img src="images/animals.jpg" width=300px height=300px>
+				</button>
+
+				<button type="button" id="quizButton" onclick="modalOpen('quizModal')">
+				 <img src="images/quizz.jpg" width=300px height=300px>
+				</button>
+
+		</div>
+
+          <div id="bodyModal" class="modal">
+
+            <div class="bodyContent">
+              <span class="close" onclick="modalClose('bodyModal')">&times;</span>
+              <p>body img part</p>
+              <img src="images/base.jpg" id="figure">
+            </div>
+
+          </div>
+
+          <!--Memory game pop-up-->
+
+          <div id="memModal" class="modal">
+
+            <div class="bodyContent">
+              <span class="close" onclick="modalClose('memModal')">&times;</span>
+              <p>memory game</p>
+            </div>
+
+          </div>
+
+          <!--Quiz pop-up-->
+          <div id="quizModal" class="modal">
+
+            <div class="bodyContent">
+
+              <span class="close" onclick="modalClose('quizModal')">&times;</span>
+
+						<div id="start">
+							<p>Test your vocabulary</p>
+							<br>
+							<p id="quizName">Language name</p>
+
+							<div id="selectLang">
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+								<button type="button" class="startQuiz" onclick="startQuiz()" name="Start quiz">
+								<img src="./images/language.jpg" width="200px" height="200px">
+								</button>
+
+							</div>
+						</div>
+
+							<div id="quiz">
+
+								<img src="./images/animals.jpg" width="250px" height="250px">
+								<p id="engWord">English name</p>
+								<p>Choose the correct indigenous word</p>
+
+								<div id="quizContainer">
+
+									<div id="col1"></div>
+
+									<div id="col2"></div>
+
+								</div>
+
+								<button type="button" class="btn btn-danger btn-block" id="nextQuestion" onclick="advanceQuiz()">
+									Next question
+								</button>
+
+								<button type="button" class="btn btn-danger btn-block" id="finish">
+									Finish
+								</button>
+							</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+</body>
+<script src="js/language.js"></script>
+</html>
