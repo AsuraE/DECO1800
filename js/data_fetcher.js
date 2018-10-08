@@ -1,4 +1,10 @@
 $(document).ready(get_parsed_data());
+$(document).ajaxStop(function(){
+    fill_page(parsed_data_map);
+});
+
+
+var parsed_data_map = new Map();
 
 /**
   * Client side implementation to fetch all datasets from the indigenous word list page on data.gov.au.
@@ -8,9 +14,6 @@ $(document).ready(get_parsed_data());
 function get_parsed_data() 
 {
     var resource_ids_map = get_resource_ids();
-    // var parsed_data_map = parse_datasets(resource_ids_map);
-
-    // return parsed_data_map;
 }
 
 
@@ -48,7 +51,6 @@ function get_resource_ids()
 function parse_datasets(resource_ids_map)
 {
     var baseurl = "https://data.gov.au/api/action/datastore_search";
-    var parsed_data_map = new Object();
 
     $.each(resource_ids_map, function(language_name, resource_id) {
         $.ajax({
@@ -57,25 +59,15 @@ function parse_datasets(resource_ids_map)
         dataType: "jsonp", // We use "jsonp" to ensure AJAX works correctly locally (otherwise XSS).
         cache: true,
         success: function(data) {
-            var language_map = new Object();
+            var language_map = new Map();
             // Datasets are ordered so that English is column 1 and indigenous is column 2
             // A better solution would be to regex the language name to the column name to ensure
             // a match without relying on this assumption, but that's restricted by time at the moment
             $.each(data.result.records, function(record_index, record_value) {
                 language_map[record_value["English"]] = record_value[language_name];
             });
-            // console.log("Language: " + language_name + ". Map: " + JSON.stringify(language_map));
-            parsed_data_map[language_name] = language_map;  
-            var html = '<div><h1>' + language_name + '</h1><a href=\'language.html\'><img src="images/language.jpg" alt="language" height=150px width=200px></div>';
-            document.getElementById('languages').innerHTML += html;
+            parsed_data_map[language_name] = language_map;
         }
         });
     });
-
-    // return parsed_data_map;
 }
-
-// function build_data_map()
-// {
-//     var parsed_data_map;
-// }

@@ -1,13 +1,13 @@
-$(document).ready(fill_page());
-
-function fill_page()
+function fill_page(parsed_data_map)
 {
     // Array(Language Name => Map(English=>Indigenous))
-    parsed_data_map = get_parsed_data();
 
+
+    // Sort data by language
+    var sorted_data = new Map([parsed_data_map.entries()].sort());
+    console.log("Test 0: " + parsed_data_map.entries());
     $.each(parsed_data_map, function(language_name, word_map) {
-        console.log(language_name);
-        var html = '<div><h1>' + language_name + '</h1><img src="images/language.jpg" alt="language" height=150px width=200px></div>';
+        var html = '<a href=\'language.html\'><div><h1>' + language_name + '</h1><img src="images/language.jpg" alt="language" height=150px width=200px></div></a>';
         document.getElementById('languages').innerHTML += html;
     });
 }
