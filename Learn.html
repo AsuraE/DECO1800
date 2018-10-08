@@ -5,9 +5,9 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style-visual.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-	<script src="js/language.js"></script>
 
 </head>
 
@@ -120,17 +120,18 @@
 							<div id="quiz">
 
 								<img src="./images/animals.jpg" width="250px" height="250px">
-								<p>English name</p>
+								<p id="engWord">English name</p>
 								<p>Choose the correct indigenous word</p>
 
-								<form>
-										<input type="radio" name="option1" value="option1">option1<br>
-										<input type="radio" name="option2" value="option2">option2<br>
-										<input type="radio" name="option3" value="option3">option3<br>
-										<input type="radio" name="option4" value="option4">option4<br>
-								</form>
+								<div id="quizContainer">
 
-								<button type="button" class="btn btn-danger btn-block" id="nextQuestion">
+									<div id="col1"></div>
+
+									<div id="col2"></div>
+
+								</div>
+
+								<button type="button" class="btn btn-danger btn-block" id="nextQuestion" onclick="advanceQuiz()">
 									Next question
 								</button>
 
@@ -147,5 +148,5 @@
 
 
 </body>
-
+<script src="js/language.js"></script>
 </html>

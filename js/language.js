@@ -22,9 +22,81 @@ function modalClose(modalName) {
   document.getElementById("start").style.visibility="visible";
   document.getElementById("start").style.display="block";
 }
+/*
+  quiz stuff
+*/
+
+var questions = [{
+  /*
+  {
+    image: ,
+    engWord,
+    choices[String] ,
+    correctAnswer
+  }
+  */
+  question: "What is 2*5?",
+  choices: [2, 5, 10, 15],
+  correctAnswer: 2
+}, {
+  question: "What is 2*6?",
+  choices: [3, 6, 9, 12],
+  correctAnswer: 3
+}, {
+  question: "What is 8*9?",
+  choices: [72, 99, 108, 134],
+  correctAnswer: 0
+}, {
+  question: "What is 1*7?",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  question: "What is 5*8?",
+  choices: [20, 30, 40, 50],
+  correctAnswer: 2
+}];
+
+var questionCounter = 0;
 
 function startQuiz() {
   document.getElementById("quiz").style.display="block";
   document.getElementById("quiz").style.visibility="visible";
   document.getElementById("start").style.display="none";
+  createQuiz(questionCounter);
+}
+
+function advanceQuiz() {
+  questionCounter += 1;
+  if (questionCounter == questions.length) {
+    document.getElementById("finish").style.display="block";
+    document.getElementById("finish").style.visibility="visible";
+    document.getElementById("nextQuestion").style.display="none";
+  } else {
+    createQuiz(questionCounter);
+  }
+}
+
+function createQuiz(index) {
+
+document.getElementById("engWord").innerHTML = questions[index].question;
+
+var col1 = document.getElementById("col1");
+var col2 = document.getElementById("col2");
+
+if (col1.innerHTML != "" && col2.innerHTML != "") {
+  col1.innerHTML = "";
+  col2.innerHTML = "";
+}
+
+ for (var i = 0; i < questions[index].choices.length; i++) {
+
+  var choice = '<input type="radio" name="answer" value=' + i + ' />';
+  choice += questions[index].choices[i] + "<br>";
+
+  if (i+1 <= 2)
+    document.getElementById("col1").innerHTML += choice;
+  else
+    document.getElementById("col2").innerHTML += choice;
+ }
+
 }

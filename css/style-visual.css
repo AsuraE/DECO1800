@@ -80,8 +80,8 @@ body, #lang-ind {
 
 #main-menu li.current a {
 	font-weight:bold;
-	color:#8F2F23; 
-	
+	color:#8F2F23;
+
 }
 
 
@@ -241,6 +241,22 @@ body, #lang-ind {
 
 #finish {
 	display: none;
+	margin: auto;
+	width: 30%;
+}
+
+#nextQuestion  {
+	margin: auto;
+	width: 30%;
+}
+
+#quizContainer {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 /* Add Animation */
