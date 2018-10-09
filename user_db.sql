@@ -1,6 +1,6 @@
 CREATE TABLE `users`
 (
- `uuid`               VARCHAR(36) NOT NULL ,
+ `email`              VARCHAR(255) NOT NULL,
  `username`           VARCHAR(255) NOT NULL ,
  `password`           VARCHAR(255) NOT NULL ,
  `mem_times_played`   INT NOT NULL ,
@@ -11,5 +11,5 @@ CREATE TABLE `users`
  `quiz_best_score`    INT NOT NULL ,
  `languages_visited`  INT NOT NULL ,
 
-PRIMARY KEY (`uuid`)
+PRIMARY KEY (`email`)
 );
