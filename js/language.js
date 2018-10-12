@@ -64,6 +64,7 @@ var questions = [{
 }];
 
 var questionCounter = 0;
+var userAns = 0;
 
 /*
 start quiz
@@ -73,20 +74,46 @@ function startQuiz() {
   document.getElementById("quiz").style.visibility="visible";
   document.getElementById("start").style.display="none";
   createQuiz(questionCounter);
+  userAns = getAnswer();
+  checkAnswer(userAns);
 }
 
 /*
 advance to the next question
 */
 function advanceQuiz() {
-  questionCounter += 1;
+  questionCounter ++;
   if (questionCounter == questions.length) {
     document.getElementById("finish").style.display="block";
     document.getElementById("finish").style.visibility="visible";
     document.getElementById("nextQuestion").style.display="none";
   } else {
+    userAns = getAnswer();
     createQuiz(questionCounter);
+    checkAnswer(userAns);
   }
+}
+
+function getAnswer() {
+  var answers = document.getElementsByName('answer');
+  var checkedAnswer;
+  for(var i = 0; i < answers.length; i++){
+      if(answers[i].checked){
+          checkedAnswer = answers[i].value;
+          return checkedAnswer;
+      }
+    }
+}
+
+function checkAnswer(answer) {
+  if (answer == null) {
+    alert("Please pick your answer");
+  } else if (answer == questions[questionCounter].correctAnswer) {
+    alert("Correct");
+  } else {
+    alert("Wrong");
+  }
+
 }
 
 /*
