@@ -25,46 +25,101 @@ function modalClose(modalName) {
 /*
   quiz stuff
 */
+/*
+{
+  question format
 
-//// TODO: add animations, make quiz smoother
-
+  image: ,
+  engWord,
+  choices[String] ,
+  correctAnswer
+}
+*/
 var questions = [{
-  /*
-    dummy questions
-  */
-  /*
-  {
-    question format
-
-    image: ,
-    engWord,
-    choices[String] ,
-    correctAnswer
-  }
-  */
-  question: "What is 2*5?",
+  image: "./images/memory game/bird.png",
+  question: "Bird",
   choices: [2, 5, 10, 15],
   correctAnswer: 2
 }, {
-  question: "What is 2*6?",
+  image: "./images/memory game/snake_carpet.png",
+  question: "Carpet Snake",
   choices: [3, 6, 9, 12],
   correctAnswer: 3
 }, {
-  question: "What is 8*9?",
+  image: "./images/memory game/crow.png",
+  question: "Crow",
   choices: [72, 99, 108, 134],
   correctAnswer: 0
 }, {
-  question: "What is 1*7?",
+  image: "./images/memory game/dingo.png",
+  question: "Dingo/Wild Dog",
   choices: [4, 5, 6, 7],
   correctAnswer: 3
 }, {
-  question: "What is 5*8?",
+  image: "./images/memory game/eagle.png",
+  question: "Eagle",
   choices: [20, 30, 40, 50],
   correctAnswer: 2
+}, {
+  image: "./images/memory game/emu.png",
+  question: "Emu",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/fish.png",
+  question: "Fish",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/horse.png",
+  question: "Horse",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/kangaroo.png",
+  question: "Kangaroo",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/koala.png",
+  question: "Koala",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/pelican.png",
+  question: "Pelican",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/possum.png",
+  question: "Possum",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/shark.png",
+  question: "Shark",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/snake.png",
+  question: "Black Snake",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/sugarglider.png",
+  question: "Sugar Glider",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
+}, {
+  image: "./images/memory game/wallaby.png",
+  question: "Wallaby",
+  choices: [4, 5, 6, 7],
+  correctAnswer: 3
 }];
 
 var questionCounter = 0;
 var userAns;
+var language;
 
 /*
 start quiz
@@ -126,6 +181,7 @@ index(int): question index
 function createQuiz(index) {
 
   document.getElementById("engWord").innerHTML = questions[index].question;
+  document.getElementById("quizImg").src = questions[index].image;
 
   var col1 = document.getElementById("col1");
   var col2 = document.getElementById("col2");
