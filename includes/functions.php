@@ -31,13 +31,13 @@ function secure_session_start() {
   */
 function login($email, $password, $mysqli) 
 {
-    if ($stmt = $mysqli->prepare("SELECT id, username, password FROM members WHERE email = ? LIMIT 1")) {
+    if ($stmt = $mysqli->prepare("SELECT id, username, password FROM users WHERE email = ? LIMIT 1")) {
         $stmt->bind_param('s', $email);  
         $stmt->execute();    
         $stmt->store_result();
         $stmt->bind_result($user_id, $username, $db_password);
         $stmt->fetch();
- 
+
         // num_rows will either return 1 if there is a user or 0 if not
         if ($stmt->num_rows == 1) {
             if (account_locked($user_id, $mysqli) == true) {
