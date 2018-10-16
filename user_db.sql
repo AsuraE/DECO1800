@@ -1,10 +1,11 @@
 CREATE TABLE `users`
 (
+    `id`                 INT NOT NULL AUTO_INCREMENT,
     `email`              VARCHAR(255) NOT NULL,
     `username`           VARCHAR(255) NOT NULL ,
     `password`           VARCHAR(255) NOT NULL ,
-    `time` DATETIME NOT NULL,
-    `attempts` INT NOT NULL,
+    `time`               DATETIME NOT NULL,
+    `attempts`           INT NOT NULL,
     `mem_times_played`   INT NOT NULL ,
     `mem_average_time`   INT NOT NULL ,
     `mem_best_time`      INT NOT NULL ,
@@ -13,5 +14,5 @@ CREATE TABLE `users`
     `quiz_best_score`    INT NOT NULL ,
     `languages_visited`  INT NOT NULL ,
 
-    PRIMARY KEY (`email`)
+    PRIMARY KEY (`id`)
 );
