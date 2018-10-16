@@ -1,0 +1,16 @@
+'location = array(language=>location);
+language = array(language=>language);
+places = array(language=>places);
+
+TEXT DUMP HERE
+
+var language = localStorage.getItem("language");
+
+
+var locationHTML = "<h1>location</h1><p>location[language]</p>";
+var languageHTML = "<h1>language</h1><p>langauge[language]</p>";
+var placesHTML = "<h1>places</h1><p>places[language]</p>"
+
+document.getElementById('DIV ID HERE').innerHTML = locationHTML;
+document.getElementById('DIV ID HERE').innerHTML = languageHTML;
+document.getElementById('DIV ID HERE').innerHTML = placesHTML;

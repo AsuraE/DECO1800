@@ -152,21 +152,30 @@ header {
 #thisLang {
 	display:flex;
 	margin:1em;
+	padding:1em; 
+	 
+}
+
+#thisLang h3 {
+	text-align:center;
 }
 
 #thisLang div {
 	width:50%;
+	padding: 1.5em; 
+	text-align:justify; 
 }
 
 #langName {
 	margin-bottom: 2em;
 }
 
-#langMain button {
-	margin-top: 2em;
+#lang-ind #word-list {
+	margin: 2em;
 	width:30%;
 	background-color:#8F2F23;
 	border:#8F2F23;
+
 }
 
 #langMain #langName {
