@@ -56,4 +56,4 @@ include_once 'includes/functions.php';
         </form>
         <p>Return to the <a href="index.php">login page</a>.</p>
     </body>
-</html>r
+</html>
