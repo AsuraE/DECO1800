@@ -36,9 +36,12 @@ body, #lang-ind {
 }
 
 /*Homepage picture*/
-#homepage-pic img{
+#homepage-pic {
+	display:block;
 	width: 90%;
 	padding:10px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*Main Menu Home Page */
