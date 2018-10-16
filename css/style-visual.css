@@ -52,16 +52,16 @@ body, #lang-ind {
 	margin-top:0.5em;
 	margin-bottom:1em;
 	background-color:rgba(255, 255, 255, 0.5);
-
+	
 }
 
 #main-menu ul{
 	padding:0.5em;
 	text-align:center;
-	border-top-style: ridge;
+	/*border-top-style: ridge;
 	border-top-width: 3px;
-	border-bottom-style:ridge;
-	border-bottom-width: 3px;
+	/*border-bottom-style:ridge;
+	border-bottom-width: 3px;*/
 
 }
 
@@ -167,6 +167,14 @@ header {
 	width:30%;
 	background-color:#8F2F23;
 	border:#8F2F23;
+}
+
+#langMain #langName {
+	text-align:center;  
+}
+
+#langMain #hello {
+	text-align:center; 
 }
 
 /*Learn page*/
