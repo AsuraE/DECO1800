@@ -34,6 +34,16 @@ body, #lang-ind {
 	width: 50%;
 	padding: 10px;
 }
+
+/*Homepage picture*/
+#homepage-pic {
+	display:block;
+	width: 90%;
+	padding:10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /*Main Menu Home Page */
 
 #main-menu {
