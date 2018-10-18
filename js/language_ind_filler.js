@@ -69,9 +69,13 @@ function modalOpen(modalName) {
     }
   }
   
+ 
   
+}
 
-  
+function modalClose(modalName) {
+  document.getElementById(modalName).style.display = "none";
+ 
 }
 
 
