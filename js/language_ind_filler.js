@@ -1,5 +1,4 @@
-$(document).ready(function() {
-}); 
+
 
 
 
@@ -11,7 +10,7 @@ var people_array = new Array();
 
 
 var language = sessionStorage.getItem('language');
-alert('Selected Language is: ' + language);
+// alert('Selected Language is: ' + language);
 
 
 /*Data for Yugara */ 
@@ -39,12 +38,12 @@ people_array['Yugambeh']='Billy Drumley - Indigenous community leader Ellen van 
 
 /*Data for Turubul */
 
-location_array['Turubul']= 'Brisbane area north to Caboolture and the Sunshine Coast.';
+location_array['Turubal']= 'Brisbane area north to Caboolture and the Sunshine Coast.';
 
-language_array['Turubul'] = 'Linguistic research, including AUSTLANG and AIATSIS indicate there is some uncertainty around Turubul including whether it refers to a dialect or a group within the North Brisbane Region. Historical documentation from settlers, missionaries and others record words from Turubul since the 1840s. There are shared words between Turubul and neighbouring languages of Kabi Kabi to the north and Yugara / Yuggera to the south.';
+language_array['Turubal'] = 'Linguistic research, including AUSTLANG and AIATSIS indicate there is some uncertainty around Turubul including whether it refers to a dialect or a group within the North Brisbane Region. Historical documentation from settlers, missionaries and others record words from Turubul since the 1840s. There are shared words between Turubul and neighbouring languages of Kabi Kabi to the north and Yugara / Yuggera to the south.';
 
 
-people_array['Turubul']='Uncle Joe Kirk';
+people_array['Turubal']='Uncle Joe Kirk';
 
 
 
@@ -54,6 +53,8 @@ var locationHTML = '<h1>location</h1><p>' + location_array[language] + '</p>';
 var languageHTML = '<h1>language</h1><p>' + language_array[language] + '</p>';
 var placesHTML = '<h1>places</h1><p>' + people_array[language] + '</p>'
 
-document.getElementById('location').innerHTML = locationHTML;
+document.getElementById("location").innerHTML = locationHTML;
 document.getElementById('language').innerHTML = languageHTML;
-document.getElementById('places').innerHTML = placesHTML; 
+document.getElementById('places').innerHTML = placesHTML;
+
+// $('#location').html(locationHTML);
