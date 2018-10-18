@@ -256,11 +256,11 @@ function checkAnswer(answer) {
   if (answer == null) {
     alert("Please pick your answer");
   } else if (answer == questions[questionCounter].correctAnswer[language]) {
-    alert("Correct");
+    alert("Awesome work! You got it right!");
     questionCounter ++;
     createQuiz(questionCounter, language);
   } else {
-    alert("Wrong");
+    alert("Sorry, that wasn't correct. Why don't you try again?");
   }
 
 }
