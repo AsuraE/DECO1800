@@ -14,19 +14,19 @@ var language = sessionStorage.getItem('language');
 
 
 /*Data for Yugara */ 
-location_array['Yugara']='Yugara a tribe of Australian Aboriginal people which inhabited the territories from Moreton Bay to Toowoomba including the city of Brisbane (including Ipswich) before European settlement of Australia. This group is one of the traditional custodians of the land over which much of Brisbane is built';
+location_array['Yuggera']='Yugara a tribe of Australian Aboriginal people which inhabited the territories from Moreton Bay to Toowoomba including the city of Brisbane (including Ipswich) before European settlement of Australia. This group is one of the traditional custodians of the land over which much of Brisbane is built';
 
-language_array['Yugara']='Yugara is classified as belonging to the Durubalic subgroup of the Pama–Nyungan languages,but is also treated as the general name for the languages of the Brisbane area of which Turrbal has historically been considered a dialect.[4] The Australian English word \'yakka\'(loosely meaning \'work\', as in \'hard yakka\') came from the Jagera language (yaga, \'strenuous work\').';
+language_array['Yuggera']='Yugara is classified as belonging to the Durubalic subgroup of the Pama–Nyungan languages,but is also treated as the general name for the languages of the Brisbane area of which Turrbal has historically been considered a dialect.[4] The Australian English word \'yakka\'(loosely meaning \'work\', as in \'hard yakka\') came from the Jagera language (yaga, \'strenuous work\').';
 
-places_array['Yugara']='Map of Traditional Lands of Australian Aboriginals around Brisbane. Meebatboogan, Mount Greville, Moogerah Peaks National Park. Cooyinnirra, Mount Mitchell, Main Range National Park. Booroongapah, Flinders Peak, Teviot Range. Ginginbaar, Mount Blaine, Teviot Range.';
+places_array['Yuggera']='Map of Traditional Lands of Australian Aboriginals around Brisbane. Meebatboogan, Mount Greville, Moogerah Peaks National Park. Cooyinnirra, Mount Mitchell, Main Range National Park. Booroongapah, Flinders Peak, Teviot Range. Ginginbaar, Mount Blaine, Teviot Range.';
 
 
 /*Data for Yugarabul. Please note it is the same as for Yugara */
-location_array['Yugara']='Yugara a tribe of Australian Aboriginal people which inhabited the territories from Moreton Bay to Toowoomba including the city of Brisbane (including Ipswich) before European settlement of Australia. This group is one of the traditional custodians of the land over which much of Brisbane is built'; 
+location_array['Yugarabul']='Yugara a tribe of Australian Aboriginal people which inhabited the territories from Moreton Bay to Toowoomba including the city of Brisbane (including Ipswich) before European settlement of Australia. This group is one of the traditional custodians of the land over which much of Brisbane is built'; 
 
-language_array['Yugara']='Yugara is classified as belonging to the Durubalic subgroup of the Pama–Nyungan languages, but is also treated as the general name for the languages of the Brisbane area of which Turrbal has historically been considered a dialect.[4] The Australian English word \'yakka\' (loosely meaning \'work\', as in \'hard yakka\') came from the Jagera language (yaga, \'strenuous work\').';
+language_array['Yugarabul']='Yugara is classified as belonging to the Durubalic subgroup of the Pama–Nyungan languages, but is also treated as the general name for the languages of the Brisbane area of which Turrbal has historically been considered a dialect.[4] The Australian English word \'yakka\' (loosely meaning \'work\', as in \'hard yakka\') came from the Jagera language (yaga, \'strenuous work\').';
 
-people_array['Yugara']='Map of Traditional Lands of Australian Aboriginals around Brisbane. Meebatboogan, Mount Greville, Moogerah Peaks National Park. Cooyinnirra, Mount Mitchell, Main Range National Park. Booroongapah, Flinders Peak, Teviot Range. Ginginbaar, Mount Blaine, Teviot Range.';
+people_array['Yugarabul']='Map of Traditional Lands of Australian Aboriginals around Brisbane. Meebatboogan, Mount Greville, Moogerah Peaks National Park. Cooyinnirra, Mount Mitchell, Main Range National Park. Booroongapah, Flinders Peak, Teviot Range. Ginginbaar, Mount Blaine, Teviot Range.';
 
 /*Data for Yugambeh */
 
@@ -56,5 +56,23 @@ var placesHTML = '<h1>places</h1><p>' + people_array[language] + '</p>'
 document.getElementById("location").innerHTML = locationHTML;
 document.getElementById('language').innerHTML = languageHTML;
 document.getElementById('places').innerHTML = placesHTML;
+
+
+
+function modalOpen(modalName) {
+  modal = document.getElementById(modalName);
+  modal.style.display = "block";
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+  
+  
+
+  
+}
+
 
 // $('#location').html(locationHTML);
