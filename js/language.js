@@ -275,24 +275,17 @@ function createQuiz(index, language) {
   document.getElementById("engWord").innerHTML = questions[index].question;
   document.getElementById("quizImg").src = questions[index].image;
 
-  var col1 = document.getElementById("col1");
-  var col2 = document.getElementById("col2");
-
-  if (col1.innerHTML != "" && col2.innerHTML != "") {
-    col1.innerHTML = "";
-    col2.innerHTML = "";
-  }
+  if (document.getElementById("quizContainer") != "")
+    document.getElementById("quizContainer").innerHTML = "";
 
    for (var i = 0; i < questions[index].choices[language].length; i++) {
 
     var wordIndex = questions[index].choices[language][i]
-    var choice = '<input type="radio" name="answer" value=' + i + ' />';
-    choice += animalWords[language][wordIndex] + "<br>";
+    var choice = '<div><input type="radio" name="answer" value=' + i + ' />';
 
-    if (i+1 <= 2)
-      document.getElementById("col1").innerHTML += choice;
-    else
-      document.getElementById("col2").innerHTML += choice;
-   }
+    choice += animalWords[language][wordIndex] + "</div>";
 
+    document.getElementById("quizContainer").innerHTML += choice;
+
+ }
 }

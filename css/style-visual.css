@@ -52,7 +52,7 @@ body, #lang-ind {
 	margin-top:0.5em;
 	margin-bottom:1em;
 	background-color:rgba(255, 255, 255, 0.5);
-	
+
 }
 
 #main-menu ul{
@@ -152,8 +152,8 @@ header {
 #thisLang {
 	display:flex;
 	margin:1em;
-	padding:1em; 
-	 
+	padding:1em;
+
 }
 
 #thisLang h3 {
@@ -162,8 +162,8 @@ header {
 
 #thisLang div {
 	width:50%;
-	padding: 1.5em; 
-	text-align:justify; 
+	padding: 1.5em;
+	text-align:justify;
 }
 
 #langName {
@@ -171,34 +171,34 @@ header {
 }
 
 #lang-ind #word-list {
-	display:block; 
+	display:block;
 	margin: auto;
-	padding-left:3.5em;  
-	padding-bottom:2em; 
-	overflow:auto; 
+	padding-left:3.5em;
+	padding-bottom:2em;
+	overflow:auto;
 
-	
+
 
 }
 
 #lang-ind .word_list_but {
-	
-	text-align:center; 
-	padding:1em; 
-	width:20%; 
+
+	text-align:center;
+	padding:1em;
+	width:20%;
 	background-color:#8F2F23;
 	border:#8F2F23;
 	font-family: 'Fredoka One', sans-serif, cursive;
-	color:white; 
-	
+	color:white;
+
 }
 
 #langMain #langName {
-	text-align:center;  
+	text-align:center;
 }
 
 #langMain #hello {
-	text-align:center; 
+	text-align:center;
 }
 
 /*Learn page*/
@@ -237,8 +237,8 @@ header {
   height: 100%; /* Full height */
   /*overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.8);/* Black w/ opacity */ 
- 
+  background-color: rgba(0,0,0,0.8);/* Black w/ opacity */
+
 }
 
 /* Modal Content/Box */
@@ -267,9 +267,9 @@ header {
 }
 
 #start {
-	padding:1em; 
-	padding-bottom:5em; 
-	background-color: #ffcc66; 
+	padding:1em;
+	padding-bottom:5em;
+	background-color: #ffcc66;
 }
 
 #start p {
@@ -281,12 +281,12 @@ header {
 	margin: auto;
 }
 #quizName {
-	padding-bottom:1em; 
+	padding-bottom:1em;
 }
 
 #quiz {
-	padding:1em; 
-	background-color: #ffcc66; 
+	padding:1em;
+	background-color: #ffcc66;
 	display: none;
 }
 
@@ -301,8 +301,8 @@ header {
 }
 
 #nextQuestion  {
-	background-color:#8F2F23; 
-	color: white; 
+	background-color:#8F2F23;
+	color: white;
 	margin: auto;
 	width: 30%;
 }
@@ -317,13 +317,13 @@ header {
 }
 
 /*#quizContainer {
-	 
-	display: flex; 
-    flex-wrap: nowrap; 	
+
+	display: flex;
+    flex-wrap: nowrap;
 }
 
 #quizContainer div {
-	margin:1.5em; 
+	margin:1.5em;
 }*/
 
 /* Add Animation */
