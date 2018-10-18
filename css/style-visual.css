@@ -268,12 +268,12 @@ header {
 
 #start {
 	padding:1em;
-	padding-bottom:5em;
+	padding-bottom:2em;
 	background-color: #ffcc66;
 }
 
 #start p {
-	margin-top: 2%;
+	margin-top: 1em;
 }
 
 .startQuiz {
@@ -316,15 +316,7 @@ header {
 	justify-content: space-evenly;
 }
 
-/*#quizContainer {
 
-	display: flex;
-    flex-wrap: nowrap;
-}
-
-#quizContainer div {
-	margin:1.5em;
-}*/
 
 /* Add Animation */
 @keyframes animatetop {
