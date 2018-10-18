@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	alert('Document is ready');
 }); 
 
 
@@ -11,7 +10,9 @@ var people_array = new Array();
 
 
 
-var language = localStorage.getItem('language');
+var language = sessionStorage.getItem('language');
+alert('Selected Language is: ' + language);
+
 
 /*Data for Yugara */ 
 location_array['Yugara']='Yugara a tribe of Australian Aboriginal people which inhabited the territories from Moreton Bay to Toowoomba including the city of Brisbane (including Ipswich) before European settlement of Australia. This group is one of the traditional custodians of the land over which much of Brisbane is built';
@@ -49,9 +50,9 @@ people_array['Turubul']='Uncle Joe Kirk';
 
  
 
-var locationHTML = '<h1>location</h1><p>' + location_array['Yugara'] + '</p>';
-var languageHTML = '<h1>language</h1><p>' + language_array['Yugara'] + '</p>';
-var placesHTML = '<h1>places</h1><p>' + people_array['Yugara'] + '</p>'
+var locationHTML = '<h1>location</h1><p>' + location_array[language] + '</p>';
+var languageHTML = '<h1>language</h1><p>' + language_array[language] + '</p>';
+var placesHTML = '<h1>places</h1><p>' + people_array[language] + '</p>'
 
 document.getElementById('location').innerHTML = locationHTML;
 document.getElementById('language').innerHTML = languageHTML;
