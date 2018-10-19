@@ -252,8 +252,10 @@ header {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   /*overflow: auto; /* Enable scroll if needed */
+  
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.8);/* Black w/ opacity */
+  
 
 }
 
@@ -293,6 +295,11 @@ header {
 
 #start p {
 	margin-top: 1em;
+	 
+}
+
+#start p:first-child {
+	font-size:22px;
 }
 
 .startQuiz {
@@ -304,7 +311,7 @@ header {
 }
 
 #quiz {
-	padding:1em;
+	padding:1em; 
 	background-color: #ffcc66;
 	display: none;
 }
@@ -326,6 +333,13 @@ header {
 	width: 30%;
 }
 
+
+#quizImg {
+	 
+	border:ridge 5px; 
+	border-color:#8F2F23;  
+}
+
 #quizContainer {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -336,6 +350,45 @@ header {
 }
 
 
+/*Quiz alerts */
+
+.alert-wrong {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.alert-correct {
+	padding: 20px;
+    background-color: green;
+    color: white;
+}
+
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+
+
+
+
+
+/*Color of the body parts pop-up */
+#bodyModal .bodyContent {
+	background-color: #BBA084;
+}
 
 /* Add Animation */
 @keyframes animatetop {
