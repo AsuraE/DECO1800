@@ -214,10 +214,17 @@ header {
  
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
-	margin-top: 0.5em;
-	width:20%; 
+	background-color: #ffcc66;
+	 
+	margin: 0.2em;
+	width:18%; 
 }
 
+.record p {
+	font-size:24px; 
+	text-align:left; 
+
+}
 #records {
 	display: flex; 
 	flex-direction:row;  
@@ -397,6 +404,11 @@ header {
 #bodyModal .bodyContent {
 	background-color: #BBA084;
 }
+
+#words .bodyContent {
+		background-color: #ffcc66;
+}
+
 
 /* Add Animation */
 @keyframes animatetop {
