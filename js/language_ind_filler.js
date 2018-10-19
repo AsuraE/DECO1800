@@ -100,8 +100,7 @@ function iterateRecords1(data) {
 	
 			$("#records").append(
 				$('<section class ="record">').append(
-					$('<h2>').text(recordEngl),
-					$('<h2>').text(recordAbor)
+					$('<p>').text(recordEngl+': '+ recordAbor)
 					
 				)
 			);
@@ -126,8 +125,7 @@ function iterateRecords2(data) {
 	
 			$("#records").append(
 				$('<section class ="record">').append(
-					$('<h2>').text(recordEngl),
-					$('<h2>').text(recordAbor)
+					$('<p>').text(recordEngl+': '+ recordAbor)
 					
 				)
 			);
@@ -151,8 +149,7 @@ function iterateRecords3(data) {
 	
 			$("#records").append(
 				$('<section class ="record">').append(
-					$('<h2>').text(recordEngl),
-					$('<h2>').text(recordAbor)
+					$('<p>').text(recordEngl+': '+ recordAbor)
 					
 				)
 			);
@@ -176,8 +173,8 @@ function iterateRecords4(data) {
 	
 			$("#records").append(
 				$('<section class ="record">').append(
-					$('<h2>').text(recordEngl),
-					$('<h2>').text(recordAbor)
+					$('<p>').text(recordEngl+': '+ recordAbor)
+					
 					
 				)
 			);
@@ -205,7 +202,7 @@ if (language=='Yuggera') {
     dataType: 'jsonp',
 	cache: true,
     success: function(data) {
-      iterateRecords(data);
+		iterateRecords1(data);
     }
   });
 
@@ -223,7 +220,6 @@ if (language=='Yuggera') {
     dataType: 'jsonp',
 	cache: true,
     success: function(data) {
-		alert('Total results found 2: ' + data.result.total);
 		iterateRecords2(data);
     }
   });
@@ -242,8 +238,7 @@ if (language=='Yuggera') {
     dataType: 'jsonp',
 	cache: true,
     success: function(data) {
-      alert('Total results found3: ' + data.result.total); 
-	  iterateRecords3(data);
+      iterateRecords3(data);
     }
   });
 } else if (language=='Turubal') {
@@ -257,7 +252,6 @@ if (language=='Yuggera') {
     dataType: 'jsonp',
 	cache: true,
     success: function(data) {
-		alert('Total results found 4: ' + data.result.total);
 		iterateRecords4(data);	  
     }
   });
