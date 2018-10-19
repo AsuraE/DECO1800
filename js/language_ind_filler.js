@@ -83,122 +83,25 @@ function modalClose(modalName) {
 
 
 
-/*Show indigineous Hello */ 
-
-/*function iterateRecords(data) {
-
-	console.log(data);
-
-	$.each(data.result.records, function(recordKey, recordValue) {
-
-		var recordLanguage = recordValue["Language and Location"];
-		var recordHello = recordValue["Greeting word"];
-		
-
-		if(recordLanguage=='Yugara[Brisbane]') {
-			
-			var helloHTML= '<h3 id="hello">' + recordHello + '</h3>';
-			document.getElementById('hello').innerHTML = helloHTML;
-			
-
-		}
-
-	});
-
-}
-
-
-$(document).ready(function() { 
-  var data = {
-    resource_id: 'a02450ec-15b2-4185-a973-c8868e70e928', // the resource id
-    limit: 5, // get 5 results
-    q: 'jones' // query for 'jones'
-  };
-  $.ajax({
-    url: 'https://data.gov.au/api/3/action/datastore_search',
-    data: data,
-    dataType: 'jsonp',
-    success: function(data) {
-      alert('Total results found: ' + data.result.total)
-    }
-  });
-}); 
- */
+/*words list pop up*/
 
 
 
-
-/*Show words */
-
-/*function getYear(year) {
-	if(year) {
-		return year.match(/[\d]{4}/); // This is regex (https://en.wikipedia.org/wiki/Regular_expression)
-	}
-}
-
-function iterateRecords(data) {
-
-	console.log(data);
-
-	$.each(data.result.records, function(recordKey, recordValue) {
-
-		var recordName = recordValue["Name"];
-		var recordYear = recordValue["Year"];
-		var recordMine = recordValue["Name Of Mine"];
-		var recordDescription = recordValue["Remarks"];
-
-		if(recordName && recordYear && recordMine && recordDescription && recordYear=="1908"|| recordYear=="1910") {
-
-			$("#records").append(
-				$('<section class="record">').append(
-					$('<h2>').text(recordName),
-					$('<h3>').text(recordYear),
-					$('<h4>').text(recordMine),
-					$('<p>').text(recordDescription)
-				)
-			);
-
-		}
-
-	});
-
-}
-
-$(document).ready(function() {
-
-	var data = {
-		resource_id: "63fd8050-0bab-4c04-b837-b2ce664077bf",
-		limit: 50
-	}
-
-	$.ajax({
-		url: "https://data.gov.au/api/3/action/datastore_search",
-		data: data,
-		dataType: "jsonp", // We use "jsonp" to ensure AJAX works correctly locally (otherwise XSS).
-		cache: true,
-		success: function(data) {
-			iterateRecords(data);
-		}
-	});
-
-}); */
-
-
-
-/*function iterateRecords(data) {
+function iterateRecords1(data) {
 
 	console.log(data);
 
 	$.each(data.result.records, function(recordKey, recordValue) {
 
 		var recordEngl = recordValue["English"];
-		var recordAbor = recordValue["Dharumbal"];
-
+		var recordAbor = recordValue["Yuggera"];
+		console.log(recordEngl);
 		if (recordEngl && recordAbor) {
+	
 			$("#records").append(
 				$('<section class ="record">').append(
-					$('<h2>').text(recordEng),
-					$('<h3>').text(recordAbor)
+					$('<h2>').text(recordEngl),
+					$('<h2>').text(recordAbor)
 					
 				)
 			);
@@ -207,42 +110,162 @@ $(document).ready(function() {
 
 	});
 
-}*/
+}
 
 
-/*$(document).ready(function() {
+function iterateRecords2(data) {
 
-	var data = {
-		resource_id: "b86e4743-d65b-4f68-935a-1c57480cde3e",
-		limit: 50
-	}
+	console.log(data);
 
-	$.ajax({
-		url: "https://data.gov.au/api/3/action/datastore_search",
-		data: data,
-		dataType: "jsonp", 
-		cache: true,
-		success: function(data) {
-			iterateRecords(data);
+	$.each(data.result.records, function(recordKey, recordValue) {
+
+		var recordEngl = recordValue["English"];
+		var recordAbor = recordValue["Yugarabul"];
+		console.log(recordEngl);
+		if (recordEngl && recordAbor) {
+	
+			$("#records").append(
+				$('<section class ="record">').append(
+					$('<h2>').text(recordEngl),
+					$('<h2>').text(recordAbor)
+					
+				)
+			);
 		}
+		
+
 	});
 
-}); */
+}
+
+function iterateRecords3(data) {
+
+	console.log(data);
+
+	$.each(data.result.records, function(recordKey, recordValue) {
+
+		var recordEngl = recordValue["English"];
+		var recordAbor = recordValue["Yugambeh"];
+		console.log(recordEngl);
+		if (recordEngl && recordAbor) {
+	
+			$("#records").append(
+				$('<section class ="record">').append(
+					$('<h2>').text(recordEngl),
+					$('<h2>').text(recordAbor)
+					
+				)
+			);
+		}
+		
+
+	});
+
+}
+
+function iterateRecords4(data) {
+
+	console.log(data);
+
+	$.each(data.result.records, function(recordKey, recordValue) {
+
+		var recordEngl = recordValue["English"];
+		var recordAbor = recordValue["Turubul"];
+		console.log(recordEngl);
+		if (recordEngl && recordAbor) {
+	
+			$("#records").append(
+				$('<section class ="record">').append(
+					$('<h2>').text(recordEngl),
+					$('<h2>').text(recordAbor)
+					
+				)
+			);
+		}
+		
+
+	});
+
+}
+
+
 
 $(document).ready(function() { 
- var data = {
-    resource_id: 'b86e4743-d65b-4f68-935a-1c57480cde3e', // the resource id
-    limit: 5, // get 5 results
-    q: 'jones' // query for 'jones'
-  };
+
+if (language=='Yuggera') {
+
+  var data = {
+    resource_id: 'ea4031e6-dc7a-4584-ac38-482f570a9637',
+    limit: 50
+
+  }
   $.ajax({
     url: 'https://data.gov.au/api/3/action/datastore_search',
     data: data,
     dataType: 'jsonp',
+	cache: true,
     success: function(data) {
-      alert('Total results found: ' + data.result.total)
+      iterateRecords(data);
     }
   });
 
-});
+} else if (language=='Yugarabul') {
+	
+	
+	var data = {
+    resource_id: '34b5f663-6c32-4ad9-8f8e-7f63ce5156f2', 
+    limit: 50
+ 
+  }
+  $.ajax({
+    url: 'https://data.gov.au/api/3/action/datastore_search',
+    data: data,
+    dataType: 'jsonp',
+	cache: true,
+    success: function(data) {
+		alert('Total results found 2: ' + data.result.total);
+		iterateRecords2(data);
+    }
+  });
+  
+  
+} else if (language=='Yugambeh') {
+	
+	var data = {
+    resource_id: '4ea75e17-cb1e-473e-9b6b-c0227b1fa787', 
+    limit: 50
+ 
+  }
+  $.ajax({
+    url: 'https://data.gov.au/api/3/action/datastore_search',
+    data: data,
+    dataType: 'jsonp',
+	cache: true,
+    success: function(data) {
+      alert('Total results found3: ' + data.result.total); 
+	  iterateRecords3(data);
+    }
+  });
+} else if (language=='Turubal') {
+	var data = {
+    resource_id: 'da3ac749-840a-479d-9466-09eb8d6e389d',
+    limit: 50
+  }
+  $.ajax({
+    url: 'https://data.gov.au/api/3/action/datastore_search',
+    data: data,
+    dataType: 'jsonp',
+	cache: true,
+    success: function(data) {
+		alert('Total results found 4: ' + data.result.total);
+		iterateRecords4(data);	  
+    }
+  });
+	
+	
+}
+  
+  
+  
+}); 
 // $('#location').html(locationHTML);
