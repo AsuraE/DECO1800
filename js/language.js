@@ -18,10 +18,15 @@ function modalOpen(modalName) {
   */
 function modalClose(modalName) {
   document.getElementById(modalName).style.display = "none";
-  document.getElementById("quiz").style.display="none";
-  document.getElementById("start").style.visibility="visible";
-  document.getElementById("start").style.display="block";
 }
+
+
+/*
+progress bar
+*/
+
+
+
 /*
   quiz stuff
 */
@@ -231,13 +236,19 @@ function startQuiz(languageIndex) {
 advance to the next question
 */
 function advanceQuiz() {
-  if (questionCounter == questions.length) {
+  if (questionCounter == 2) {
     document.getElementById("finish").style.display="block";
     document.getElementById("finish").style.visibility="visible";
     document.getElementById("nextQuestion").style.display="none";
   } else {
-    userAns = getAnswer();
-    checkAnswer(userAns);
+    if (getAnswer() == null) {
+      alert("Please pick your answer");
+      return null;
+    }
+    var temp = getAnswer();
+    userAns = temp[0];
+    ansID = temp[1];
+    checkAnswer(userAns, ansID);
   }
 }
 
@@ -247,22 +258,20 @@ function getAnswer() {
   for(var i = 0; i < answers.length; i++){
       if(answers[i].checked){
           checkedAnswer = answers[i].value;
-          return checkedAnswer;
+          return [checkedAnswer, i];
       }
     }
 }
 
-function checkAnswer(answer) {
-  if (answer == null) {
-    alert("Please pick your answer");
-  } else if (answer == questions[questionCounter].correctAnswer[language]) {
+function checkAnswer(answer, id) {
+  if (answer == questions[questionCounter].correctAnswer[language]) {
     alert("Awesome work! You got it right!");
     questionCounter ++;
     createQuiz(questionCounter, language);
   } else {
     alert("Sorry, that wasn't correct. Why don't you try again?");
+    document.getElementById("answer" + id).style.border = "2px solid red";
   }
-
 }
 
 /*
@@ -280,8 +289,9 @@ function createQuiz(index, language) {
 
    for (var i = 0; i < questions[index].choices[language].length; i++) {
 
-    var wordIndex = questions[index].choices[language][i]
-    var choice = '<div><input type="radio" name="answer" value=' + i + ' />';
+    var answer = "answer" + i;
+    var wordIndex = questions[index].choices[language][i];
+    var choice = '<div id=' + answer + '><input type="radio" name="answer" value=' + i + ' />';
 
     choice += animalWords[language][wordIndex] + "</div>";
 
