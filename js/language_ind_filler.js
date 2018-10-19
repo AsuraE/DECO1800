@@ -10,6 +10,7 @@ var people_array = new Array();
 
 
 var language = sessionStorage.getItem('language');
+
 // alert('Selected Language is: ' + language);
 
 
@@ -18,7 +19,7 @@ location_array['Yuggera']='Yugara a tribe of Australian Aboriginal people which 
 
 language_array['Yuggera']='Yugara is classified as belonging to the Durubalic subgroup of the Pama–Nyungan languages,but is also treated as the general name for the languages of the Brisbane area of which Turrbal has historically been considered a dialect.[4] The Australian English word \'yakka\'(loosely meaning \'work\', as in \'hard yakka\') came from the Jagera language (yaga, \'strenuous work\').';
 
-places_array['Yuggera']='Map of Traditional Lands of Australian Aboriginals around Brisbane. Meebatboogan, Mount Greville, Moogerah Peaks National Park. Cooyinnirra, Mount Mitchell, Main Range National Park. Booroongapah, Flinders Peak, Teviot Range. Ginginbaar, Mount Blaine, Teviot Range.';
+people_array['Yuggera']='Map of Traditional Lands of Australian Aboriginals around Brisbane. Meebatboogan, Mount Greville, Moogerah Peaks National Park. Cooyinnirra, Mount Mitchell, Main Range National Park. Booroongapah, Flinders Peak, Teviot Range. Ginginbaar, Mount Blaine, Teviot Range.';
 
 
 /*Data for Yugarabul. Please note it is the same as for Yugara */
@@ -49,14 +50,15 @@ people_array['Turubal']='Uncle Joe Kirk';
 
  
 
-var locationHTML = '<h1>location</h1><p>' + location_array[language] + '</p>';
-var languageHTML = '<h1>language</h1><p>' + language_array[language] + '</p>';
-var placesHTML = '<h1>places</h1><p>' + people_array[language] + '</p>'
+var locationHTML = '<h2>Location</h2><p>' + location_array[language] + '</p>';
+var languageHTML = '<h2>Language</h2><p>' + language_array[language] + '</p>';
+var peopleHTML = '<h2>People</h2><p>' + people_array[language] + '</p>';
+var langNameHTML= '<h2 id="langName">' + language + '</h2>';
 
 document.getElementById("location").innerHTML = locationHTML;
 document.getElementById('language').innerHTML = languageHTML;
-document.getElementById('places').innerHTML = placesHTML;
-
+document.getElementById('people').innerHTML = peopleHTML;
+document.getElementById('langName').innerHTML = langNameHTML;
 
 
 function modalOpen(modalName) {
@@ -78,5 +80,121 @@ function modalClose(modalName) {
  
 }
 
+/*Show words */
 
+/*function getYear(year) {
+	if(year) {
+		return year.match(/[\d]{4}/); // This is regex (https://en.wikipedia.org/wiki/Regular_expression)
+	}
+}
+
+function iterateRecords(data) {
+
+	console.log(data);
+
+	$.each(data.result.records, function(recordKey, recordValue) {
+
+		var recordName = recordValue["Name"];
+		var recordYear = recordValue["Year"];
+		var recordMine = recordValue["Name Of Mine"];
+		var recordDescription = recordValue["Remarks"];
+
+		if(recordName && recordYear && recordMine && recordDescription && recordYear=="1908"|| recordYear=="1910") {
+
+			$("#records").append(
+				$('<section class="record">').append(
+					$('<h2>').text(recordName),
+					$('<h3>').text(recordYear),
+					$('<h4>').text(recordMine),
+					$('<p>').text(recordDescription)
+				)
+			);
+
+		}
+
+	});
+
+}
+
+$(document).ready(function() {
+
+	var data = {
+		resource_id: "63fd8050-0bab-4c04-b837-b2ce664077bf",
+		limit: 50
+	}
+
+	$.ajax({
+		url: "https://data.gov.au/api/3/action/datastore_search",
+		data: data,
+		dataType: "jsonp", // We use "jsonp" to ensure AJAX works correctly locally (otherwise XSS).
+		cache: true,
+		success: function(data) {
+			iterateRecords(data);
+		}
+	});
+
+}); */
+
+
+
+/*function iterateRecords(data) {
+
+	console.log(data);
+
+	$.each(data.result.records, function(recordKey, recordValue) {
+
+		var recordEngl = recordValue["English"];
+		var recordAbor = recordValue["Dharumbal"];
+
+		if (recordEngl && recordAbor) {
+			$("#records").append(
+				$('<section class ="record">').append(
+					$('<h2>').text(recordEng),
+					$('<h3>').text(recordAbor)
+					
+				)
+			);
+		}
+		
+
+	});
+
+}*/
+
+
+/*$(document).ready(function() {
+
+	var data = {
+		resource_id: "b86e4743-d65b-4f68-935a-1c57480cde3e",
+		limit: 50
+	}
+
+	$.ajax({
+		url: "https://data.gov.au/api/3/action/datastore_search",
+		data: data,
+		dataType: "jsonp", 
+		cache: true,
+		success: function(data) {
+			iterateRecords(data);
+		}
+	});
+
+}); */
+
+$(document).ready(function() { 
+ var data = {
+    resource_id: 'b86e4743-d65b-4f68-935a-1c57480cde3e', // the resource id
+    limit: 5, // get 5 results
+    q: 'jones' // query for 'jones'
+  };
+  $.ajax({
+    url: 'https://data.gov.au/api/3/action/datastore_search',
+    data: data,
+    dataType: 'jsonp',
+    success: function(data) {
+      alert('Total results found: ' + data.result.total)
+    }
+  });
+
+});
 // $('#location').html(locationHTML);

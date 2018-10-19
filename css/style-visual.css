@@ -156,8 +156,16 @@ header {
 
 }
 
-#thisLang h3 {
+#thisLang h2 {
 	text-align:center;
+	color:#3E1B14;
+	
+}
+
+#thisLang p {
+	font-family: 'Patrick Hand', sans-serif, cursive;
+	color: #3E1B14;
+	font-size:20px; 
 }
 
 #thisLang div {
@@ -171,11 +179,11 @@ header {
 }
 
 #lang-ind #word-list {
-	display:block;
-	margin: auto;
-	padding-left:3.5em;
+	display:block; 
+	margin-left:40%;  
+	width:100%; 
 	padding-bottom:2em;
-	overflow:auto;
+	
 
 
 
@@ -200,6 +208,14 @@ header {
 #langMain #hello {
 	text-align:center;
 }
+
+
+.record {
+	border: 2px solid orange;
+	padding: 1em;
+	margin-top: 1em;
+}
+
 
 /*Learn page*/
 
