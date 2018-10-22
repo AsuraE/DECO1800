@@ -1,0 +1,9 @@
+Image Generation Functionality
+
+Take in templates images from /images/memory_game/
+Get words for animal word list
+Match indigenous word to file name
+Apply indigenous word to image
+Save image as filename_indigenous
+Save filenames as an array
+Return the array as JSON
