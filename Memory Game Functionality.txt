@@ -1,0 +1,79 @@
+Memory Game Functionality
+
+
+Store memory cards as list elements in a list (HTML)
+Elements in list have class of "card", type relates to "animal" (HTML)
+<img> tag with appropriate image inside
+
+
+
+JavaScript
+
+1) Create base HTML as a starting string
+
+{
+	<div class="container">
+    <section class="score-panel">
+        <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+
+        <span class="moves">0</span> Move(s)
+
+        <div class="timer">
+        </div>
+
+        <div class="restart" onclick=startGame()>
+            <i class="fa fa-repeat"></i>
+        </div>
+    </section>
+    <ul class="deck" id="card-deck">
+}
+
+2) Depending on size of the game, creates the necessary list elements and adds to string.
+While building the list elements, create the images for the memory game and record their location.
+Total images = game size / 2
+
+3) Add images to string as IMG tags
+{
+	<li class="card" type="1">
+	    <img src="PATH_TO_IMAGE" height="42" width="42">
+	</li>
+}
+
+4) Add closing footer to string
+{
+	</ul>
+
+	    <div id="popup1" class="overlay">
+	        <div class="popup">
+	            <h2>Congratulations</h2>
+	            <a class="close" href=# >×</a>
+	            <div class="content-1">
+	                Congratulations you're a winner
+	            </div>
+	            <div class="content-2">
+	                <p>You made <span id=finalMove> </span> moves </p>
+	                <p>in <span id=totalTime> </span> </p>
+	                <p>Rating:  <span id=starRating></span></p>
+	            </div>
+	            <button id="play-again"onclick="playAgain()">
+	                Play again</a>
+	            </button>
+	        </div>
+	    </div>
+	</div>
+}
+
+5) Load string into memContent div as innerHTML
+
+6) Grab all necessary elements from the HTML as variables in JS to manipulate later
+7) Store all cards in a single array
+8) Shuffle cards in cards array. Maybe do this by generating a random number, taking that as the element, and swapping it with another random element by way of a temp variable? Shuffling in a many imitating an overhand shuffle would be a waste of computing resources shuffle down the array elements.
+9) Set all variables to 0 to start the game.
+10) On click, flip cards over. CHeck if match when 2 cards are flipped. If match, continue. If not, reflip and continue.
+11) Count each move. Time as well.
+12) On all matches made (game size / 2 matches made), display winner modal.
+13) Ask to play again or quit - redirect user where needed.
