@@ -215,9 +215,9 @@ header {
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
 	background-color: #ffcc66;
-	 
 	margin: 0.2em;
 	width:18%; 
+	
 }
 
 .record p {
@@ -407,6 +407,7 @@ header {
 
 #words .bodyContent {
 		background-color: #ffcc66;
+		border: solid black; 
 }
 
 
