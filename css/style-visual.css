@@ -159,13 +159,13 @@ header {
 #thisLang h2 {
 	text-align:center;
 	color:#3E1B14;
-	
+
 }
 
 #thisLang p {
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
-	font-size:20px; 
+	font-size:20px;
 }
 
 #thisLang div {
@@ -179,11 +179,11 @@ header {
 }
 
 #lang-ind #word-list {
-	display:block; 
-	margin-left:40%;  
-	width:100%; 
+	display:block;
+	margin-left:40%;
+	width:100%;
 	padding-bottom:2em;
-	
+
 
 
 
@@ -218,24 +218,30 @@ header {
 }
 
 .record {
- 
+
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
 	background-color: #ffcc66;
+<<<<<<< HEAD
+
+	margin: 0.2em;
+	width:18%;
+=======
 	margin: 0.2em;
 	width:18%; 
 	
+>>>>>>> df75d1c85d4a622d8cc96863f54d6879486fcf71
 }
 
 .record p {
-	font-size:24px; 
-	text-align:left; 
+	font-size:24px;
+	text-align:left;
 
 }
 #records {
-	display: flex; 
-	flex-direction:row;  
-	flex-wrap: wrap; 
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
 }
 
 
@@ -274,10 +280,10 @@ header {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   /*overflow: auto; /* Enable scroll if needed */
-  
+
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.8);/* Black w/ opacity */
-  
+
 
 }
 
@@ -294,9 +300,6 @@ header {
 	animation-duration: 0.4s;
 	text-align: center;
 }
-
-
-
 
 #selectLang {
 	display: flex;
@@ -317,7 +320,7 @@ header {
 
 #start p {
 	margin-top: 1em;
-	 
+
 }
 
 #start p:first-child {
@@ -333,7 +336,7 @@ header {
 }
 
 #quiz {
-	padding:1em; 
+	padding:1em;
 	background-color: #ffcc66;
 	display: none;
 }
@@ -357,9 +360,9 @@ header {
 
 
 #quizImg {
-	 
-	border:ridge 5px; 
-	border-color:#8F2F23;  
+
+	border:ridge 5px;
+	border-color:#8F2F23;
 }
 
 #quizContainer {
@@ -370,7 +373,6 @@ header {
 	flex-direction: row;
 	justify-content: space-evenly;
 }
-
 
 /*Quiz alerts */
 
@@ -402,7 +404,9 @@ header {
     color: black;
 }
 
-
+.answers:hover {
+	cursor: pointer;
+}
 
 
 

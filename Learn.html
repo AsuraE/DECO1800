@@ -53,7 +53,7 @@
 				</button>
 
 				<button type="button" id="memButton" onclick="modalOpen('memModal')">
-				<img src="images/memory game/memorygame-tiles.png" width=300px height=300px>
+				<img src="images/memory_game/memorygame-tiles.png" width=300px height=300px>
 				</button>
 
 				<button type="button" id="quizButton" onclick="modalOpen('quizModal')">
@@ -66,12 +66,12 @@
             <div class="bodyContent">
               <span class="close" onclick="modalClose('bodyModal')">&times;</span>
               <p>body img part</p>
-			  
+
               <img src="images/body.png" id="figure">
             </div>
           </div>
 
-          <!--Memory game pop-up-->
+          <!--memory_game pop-up-->
 
           <div id="memModal" class="modal">
             <div class="bodyContent">
@@ -130,7 +130,7 @@
 									Next Question
 								</button>
 
-								<button type="button" class="btn btn-danger btn-block" id="finish" onclick="modalClose('quizModal')">
+								<button type="button" class="btn btn-danger btn-block" id="finish" onclick="resetQuiz()">
 									Done!
 								</button>
 							</div>
