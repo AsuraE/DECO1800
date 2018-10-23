@@ -241,7 +241,7 @@ function resetQuiz() {
   modalClose("quizModal");
   questionCounter = 0;
   clickEvent = 0;
-  
+
   document.getElementById("start").style.display="block";
   document.getElementById("start").style.visibility="visible";
   document.getElementById("quiz").style.display="none";
@@ -262,11 +262,11 @@ function checkAnswer(language, id) {
   var correct = animalWords[language][questionCounter];
 
   if (userAns == correct) {
-    alert("correct");
+    id.style.color = "green";
   }
 
   else {
-    alert("wrong");
+    id.style.color = "red";
   }
   clickEvent += 1;
 }

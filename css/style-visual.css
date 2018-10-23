@@ -221,8 +221,8 @@ header {
 	width:18%;
 =======
 	margin: 0.2em;
-	width:18%; 
-	
+	width:18%;
+
 >>>>>>> df75d1c85d4a622d8cc96863f54d6879486fcf71
 }
 
@@ -401,9 +401,6 @@ header {
 	cursor: pointer;
 }
 
-
-
-
 /*Color of the body parts pop-up */
 #bodyModal .bodyContent {
 	background-color: #BBA084;
@@ -411,7 +408,7 @@ header {
 
 #words .bodyContent {
 		background-color: #ffcc66;
-		border: solid black; 
+		border: solid black;
 }
 
 
