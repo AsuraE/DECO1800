@@ -60,8 +60,7 @@ var questions = [{
     [7, 0, 2, 15],
     [0, 5, 10, 13],
     [5, 10, 0, 6]
-  ],
-  correctAnswer: [3,1,0,2]
+  ]
 }, {
   image: "./images/memory_game/snake_carpet.png",
   question: "Carpet Snake", //1
@@ -70,8 +69,7 @@ var questions = [{
     [7, 1, 8, 14],
     [15, 0, 4, 1],
     [1, 3, 11, 9]
-  ],
-  correctAnswer: [2, 1, 3, 0]
+  ]
 }, {
   image: "./images/memory_game/crow.png",
   question: "Crow", //2
@@ -80,8 +78,7 @@ var questions = [{
     [1, 6, 3, 2],
     [2, 1, 8, 5],
     [13, 12, 2, 5]
-  ],
-  correctAnswer: [1, 3, 0, 2]
+  ]
 }, {
   image: "./images/memory_game/dingo.png",
   question: "Dingo/Wild Dog", //3
@@ -90,8 +87,7 @@ var questions = [{
     [15, 5, 11, 3],
     [1, 2, 3, 6],
     [1, 3, 7, 8]
-  ],
-  correctAnswer: [0, 3, 2, 1]
+  ]
 }, {
   image: "./images/memory_game/eagle.png",
   question: "Eagle", //4
@@ -100,8 +96,7 @@ var questions = [{
     [12, 4, 2, 7],
     [4, 9, 6, 2],
     [13, 3, 4, 15]
-  ],
-  correctAnswer: [3, 1, 0, 2]
+  ]
 }, {
   image: "./images/memory_game/emu.png",
   question: "Emu", //5
@@ -110,8 +105,7 @@ var questions = [{
     [13, 11, 3, 5],
     [5, 13, 0, 12],
     [8, 14, 5, 7]
-  ],
-  correctAnswer: [1, 3, 0, 2]
+  ]
 }, {
   image: "./images/memory_game/fish.png",
   question: "Fish", //6
@@ -120,8 +114,7 @@ var questions = [{
     [13, 15, 0, 6],
     [10, 6, 13, 15],
     [5, 3, 6, 12]
-  ],
-  correctAnswer: [0, 3, 1, 2]
+  ]
 }, {
   image: "./images/memory_game/horse.png",
   question: "Horse", //7
@@ -130,8 +123,7 @@ var questions = [{
     [11, 3, 2, 7],
     [2, 7, 3, 12],
     [7, 10, 9, 11]
-  ],
-  correctAnswer: [2, 3, 1, 0]
+  ]
 }, {
   image: "./images/memory_game/kangaroo.png",
   question: "Kangaroo", //8
@@ -140,8 +132,7 @@ var questions = [{
     [15, 8, 4, 11],
     [12, 2, 8, 6],
     [1, 13, 7, 8]
-  ],
-  correctAnswer: [0, 1, 2, 3]
+  ]
 }, {
   image: "./images/memory_game/koala.png",
   question: "Koala", //9
@@ -150,8 +141,7 @@ var questions = [{
     [13, 9, 0, 4],
     [10, 1, 13, 9],
     [9, 6, 3, 12]
-  ],
-  correctAnswer: [2, 1, 3, 0]
+  ]
 }, {
   image: "./images/memory_game/pelican.png",
   question: "Pelican", //10
@@ -160,8 +150,7 @@ var questions = [{
     [13, 11, 10, 7],
     [13, 10, 0, 12],
     [10, 14, 3, 7]
-  ],
-  correctAnswer: [3, 2, 1, 0]
+  ]
 }, {
   image: "./images/memory_game/possum.png",
   question: "Possum", //11
@@ -170,8 +159,7 @@ var questions = [{
     [4, 12, 2, 11],
     [12, 11, 6, 2],
     [11, 3, 4, 15]
-  ],
-  correctAnswer: [2, 3, 1, 0]
+  ]
 }, {
   image: "./images/memory_game/shark.png",
   question: "Shark", //12
@@ -180,8 +168,7 @@ var questions = [{
     [2, 3, 12, 13],
     [12, 2, 3, 7],
     [11, 10, 9, 12]
-  ],
-  correctAnswer: [1, 2, 0, 3]
+  ]
 }, {
   image: "./images/memory_game/snake.png",
   question: "Black Snake", //13
@@ -190,8 +177,7 @@ var questions = [{
     [1, 6, 3, 13],
     [13, 1, 8, 5],
     [12, 13, 2, 5]
-  ],
-  correctAnswer: [2, 3, 0, 1]
+  ]
 }, {
   image: "./images/memory_game/sugarglider.png",
   question: "Sugar Glider", //14
@@ -200,8 +186,7 @@ var questions = [{
     [14, 7, 8, 1],
     [15, 0, 4, 14],
     [3, 14, 11, 19]
-  ],
-  correctAnswer: [1, 0, 3, 2]
+  ]
 }, {
   image: "./images/memory_game/wallaby.png",
   question: "Wallaby", //15
@@ -210,8 +195,7 @@ var questions = [{
     [7, 0, 2, 15],
     [5, 15, 10, 13],
     [15, 10, 1, 6]
-  ],
-  correctAnswer: [2, 3, 1, 0]
+  ]
 }];
 
 var questionCounter = 0;
@@ -238,6 +222,7 @@ function advanceQuiz() {
     document.getElementById("finish").style.display="block";
     document.getElementById("finish").style.visibility="visible";
     document.getElementById("nextQuestion").style.display="none";
+    questionCounter = 0;
     return 1;
   }
 
@@ -245,10 +230,15 @@ function advanceQuiz() {
     alert("Please pick an answer");
     return 2;
   }
-  
+
   questionCounter++;
   createQuiz(questionCounter, language);
+  clickEvent = 0;
   return 0;
+}
+
+function resetQuiz() {
+
 }
 
 /*
@@ -259,7 +249,8 @@ index(int): question index
 
 function checkAnswer(language, id) {
   userAns = id.innerHTML;
-  var correct = questions[questionCounter].correctAnswer[language];
+  var correct = animalWords[language][questionCounter];
+
   if (userAns == correct) {
     alert("correct");
   }
