@@ -196,7 +196,7 @@ function iterateRecords5(data) {
 		var recordGreeting = recordValue["Greeting word"];
 		var recordID = recordValue["_id"]; 
 		console.log(recordID);
-		if (recordID=="72") {
+		if (recordID=="72" && language=="Yugambeh") {
 			alert (recordGreeting); 
 			$("#hello-indig").append(
 				$('<section class ="hello-ind">').append(
@@ -205,20 +205,20 @@ function iterateRecords5(data) {
 					
 				)
 			);
-		} else if (recordID=="73") {
+		} else if (recordID=="73" && language=="Yugarabul") {
 			$("#hello-indig").append(
 				$('<section class ="hello-ind">').append(
 					$('<p>').text(recordGreeting)
 						)
 			);
 			
-		} else if (recordID=="74") {
+		} else if (recordID=="74" && language=="Yuggera") {
 			$("#hello-indig").append(
 				$('<section class ="hello-ind">').append(
 					$('<p>').text(recordGreeting)
 						)
 			);
-		} else if (recordID=="57") {
+		} else if (recordID=="57" && language=="Turubal") {
 			$("#hello-indig").append(
 				$('<section class ="hello-ind">').append(
 					$('<p>').text(recordGreeting)
