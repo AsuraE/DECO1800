@@ -238,7 +238,17 @@ function advanceQuiz() {
 }
 
 function resetQuiz() {
+  modalClose("quizModal");
+  questionCounter = 0;
+  clickEvent = 0;
+  
+  document.getElementById("start").style.display="block";
+  document.getElementById("start").style.visibility="visible";
+  document.getElementById("quiz").style.display="none";
 
+  document.getElementById("nextQuestion").style.display="block";
+  document.getElementById("nextQuestion").style.visibility="visible";
+  document.getElementById("finish").style.display="none";
 }
 
 /*
