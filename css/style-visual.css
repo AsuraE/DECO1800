@@ -209,6 +209,13 @@ header {
 	text-align:center;
 }
 
+.hello-ind {
+ 
+	font-family: 'Patrick Hand', sans-serif, cursive;
+	color: #3E1B14;
+	
+	
+}
 
 .record {
  
@@ -445,3 +452,31 @@ header {
 #figure {
     height: 90%;
 }
+
+
+
+/*About us page */
+
+#about h1 {
+	padding: 1.5em; 
+	font-family: 'Patrick Hand', cursive;
+	color: #8F2F23;
+	font-weight:bold;
+	font-size:28px; 
+	
+}
+
+#about p {
+	padding:0.5em; 
+}
+
+#about-page {
+	padding: 1em; 
+	display:flex; 	
+}
+
+#team, #project {
+	width:50%; 
+	padding:0.5em; 
+}
+

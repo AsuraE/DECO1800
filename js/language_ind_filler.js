@@ -185,6 +185,52 @@ function iterateRecords4(data) {
 
 }
 
+/*Function to iterate the Hello in indigenous dataset to select the correct hello word */
+function iterateRecords5(data) {
+
+	console.log(data);
+
+	$.each(data.result.records, function(recordKey, recordValue) {
+
+		var recordTribe = recordValue["Language and Location"];
+		var recordGreeting = recordValue["Greeting word"];
+		var recordID = recordValue["_id"]; 
+		console.log(recordID);
+		if (recordID=="72") {
+			alert (recordGreeting); 
+			$("#hello-indig").append(
+				$('<section class ="hello-ind">').append(
+					$('<p>').text(recordGreeting)
+					
+					
+				)
+			);
+		} else if (recordID=="73") {
+			$("#hello-indig").append(
+				$('<section class ="hello-ind">').append(
+					$('<p>').text(recordGreeting)
+						)
+			);
+			
+		} else if (recordID=="74") {
+			$("#hello-indig").append(
+				$('<section class ="hello-ind">').append(
+					$('<p>').text(recordGreeting)
+						)
+			);
+		} else if (recordID=="57") {
+			$("#hello-indig").append(
+				$('<section class ="hello-ind">').append(
+					$('<p>').text(recordGreeting)
+						)
+			);
+		}
+		
+
+	});
+
+}
+
 
 
 $(document).ready(function() { 
@@ -258,6 +304,26 @@ if (language=='Yuggera') {
 	
 	
 }
+
+
+
+
+
+  var data = {
+    resource_id: 'a02450ec-15b2-4185-a973-c8868e70e928', // the resource id
+    limit: 100
+  }
+  $.ajax({
+    url: 'https://data.gov.au/api/3/action/datastore_search',
+    data: data,
+    dataType: 'jsonp',
+	cache:true, 
+    success: function(data) {
+      alert('Total results found: ' + data.result.total);
+	  iterateRecords5(data);
+	  
+    }
+  });
   
   
   
