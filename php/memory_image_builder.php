@@ -17,7 +17,7 @@
     //header('Content-type: image/jpeg');
 
     // Create Image From Existing File
-    $png_image = imagecreatefrompng('../images/memory_game/crow.png');
+    $png_image = imagecreatefrompng('../images/memory_game/templates/crow.png');
 
     // Allocate A Color For The Text
     $black = imagecolorallocate($png_image, 0, 0, 0);
@@ -28,7 +28,9 @@
     $y = 1400;
     $size = 100;
     $angle = 0;
-    $font = __DIR__.'\consola.ttf';
+    $font = __DIR__.'\fonts\FredokaOne-Regular.ttf';
+    
+
     // echo $font;
 
     // Print Text On Image
