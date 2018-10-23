@@ -28,8 +28,7 @@
     $y = 1400;
     $size = 100;
     $angle = 0;
-    $font = __DIR__.'\consola.ttf';
-    // echo $font;
+    $font = __DIR__.'\fonts\FredokaOne-Regular.ttf';
 
     // Print Text On Image
     imagettftext($png_image, $size, $angle, $x, $y, $black, $font, $text);

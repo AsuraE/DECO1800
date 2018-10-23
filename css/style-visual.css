@@ -129,7 +129,7 @@ header {
 
 #languages div {
 	border: #3E1B14 solid;
-	margin: 2em;
+	margin: 1em;
 	padding:0.5em;
 
 
@@ -137,7 +137,7 @@ header {
 
 #languages img {
 
-	padding:2em;
+	padding:1em;
 
 
 }
@@ -215,9 +215,15 @@ header {
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
 	background-color: #ffcc66;
+<<<<<<< HEAD
 
 	margin: 0.2em;
 	width:18%;
+=======
+	margin: 0.2em;
+	width:18%; 
+	
+>>>>>>> df75d1c85d4a622d8cc96863f54d6879486fcf71
 }
 
 .record p {
@@ -405,6 +411,7 @@ header {
 
 #words .bodyContent {
 		background-color: #ffcc66;
+		border: solid black; 
 }
 
 
