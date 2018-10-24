@@ -266,13 +266,14 @@ function checkAnswer(language, id) {
 
   if (userAns != correct) {
     id.style.color = "red";
+    id.style.animation = " .8s shake";
   }
 
   else {
     id.style.color = "green";
     clickEvent += 1;
   }
-  
+
 }
 
 function createQuiz(index, language) {
