@@ -115,6 +115,7 @@ body, #lang-ind {
 	border-radius:30px; 
 }
 
+
 #lang-ind header, #lang header, #learn header, #about header {
 	display: flex;
 	flex-direction: row;
@@ -153,6 +154,10 @@ body, #lang-ind {
 }
 
 
+#lang-header {
+	margin: 2em; 
+}
+
 
 	@media only screen and (min-width:800px) {
 	}
@@ -185,7 +190,7 @@ body, #lang-ind {
 }
 
 #langName {
-	margin-bottom: 2em;
+	margin: 2em;
 }
 
 #lang-ind #word-list {
@@ -475,6 +480,9 @@ body, #lang-ind {
 
 #about p {
 	padding:0.5em; 
+	font-family: 'Patrick Hand', sans-serif, cursive;
+	color: #3E1B14;
+	font-size:20px;
 }
 
 #about-page {
