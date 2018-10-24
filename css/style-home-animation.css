@@ -14,7 +14,7 @@
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0,0,0);
-	background-image: url('../images/home page art.jpg');
+	background-image: url('../images/home_page_art.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
