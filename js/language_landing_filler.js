@@ -1,3 +1,8 @@
+$(document).ready(get_parsed_data());
+$(document).ajaxStop(function(){
+    fill_page(parsed_data_map);
+});
+
 function fill_page(parsed_data_map)
 {
     // Array(Language Name => Map(English=>Indigenous))
@@ -6,6 +11,8 @@ function fill_page(parsed_data_map)
     // Sort data by language
     var sorted_data = new Map([parsed_data_map.entries()].sort());
     var allowed_languages = ['Yuggera', 'Yugarabul', 'Turubal', 'Yugambeh'];
+    console.log(parsed_data_map);
+    console.log(parsed_data_map['Barunggam']['Arm']);
 
     $.each(parsed_data_map, function(language_name, word_map) {
         if (allowed_languages.includes(language_name)) {
@@ -25,3 +32,4 @@ function fill_page(parsed_data_map)
         }
     });
 }
+
