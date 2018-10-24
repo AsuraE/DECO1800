@@ -266,7 +266,7 @@ function checkAnswer(language, id) {
 
   if (userAns != correct) {
     id.style.color = "red";
-    id.style.animation = " .8s shake";
+    id.style.animation = "shake 2s";
   }
 
   else {
