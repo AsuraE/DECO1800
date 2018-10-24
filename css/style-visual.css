@@ -292,6 +292,10 @@ body, #lang-ind {
 	/*margin-top: 5em;*/
 }
 
+.button {
+	background-color: #BBA084;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -352,6 +356,7 @@ body, #lang-ind {
 .startQuiz {
 	width: 30%;
 	margin: auto;
+	background-color: #BBA084;
 }
 #quizName {
 	padding-bottom:1em;
