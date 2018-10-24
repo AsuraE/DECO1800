@@ -218,16 +218,19 @@ function startQuiz(languageIndex) {
 advance to the next question
 */
 function advanceQuiz() {
-  if (questionCounter == 2) {
+  //Check if all of the questions have been answered
+  if (questionCounter == 15) {
     document.getElementById("finish").style.display="block";
     document.getElementById("finish").style.visibility="visible";
     document.getElementById("nextQuestion").style.display="none";
     questionCounter = 0;
     return 1;
   }
-
+  /*Check whether the user has chosen the right answer
+  before advancing
+  */
   if (clickEvent == 0) {
-    alert("Please pick an answer");
+    alert("Please pick the correct answer");
     return 2;
   }
 
@@ -261,14 +264,15 @@ function checkAnswer(language, id) {
   userAns = id.innerHTML;
   var correct = animalWords[language][questionCounter];
 
-  if (userAns == correct) {
-    id.style.color = "green";
+  if (userAns != correct) {
+    id.style.color = "red";
   }
 
   else {
-    id.style.color = "red";
+    id.style.color = "green";
+    clickEvent += 1;
   }
-  clickEvent += 1;
+  
 }
 
 function createQuiz(index, language) {
