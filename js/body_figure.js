@@ -1,5 +1,6 @@
 function buildFigure() {
-    var headerHTML = `<img src="images/body.png" id="figure" usemap="#body_figure">
+    var headerHTML = `<span class="close" onclick="modalClose('bodyModal')">&times;</span>
+                      <img src="images/body.png" id="figure" usemap="#body_figure">
                       <map name="body_figure">
                           <area data-toggle="tooltip" title="Arm" class="arm" shape="circle" coords="906,673,50">
                           <area data-toggle="tooltip" title="Arm" class="arm" shape="circle" coords="608,673,50">
