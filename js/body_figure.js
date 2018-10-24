@@ -5,8 +5,6 @@ $(document).ajaxStop(function(){
 
 function buildFigure(parsed_data_map, language) {
     language = 'Turubul';
-    console.log(parsed_data_map);
-    console.log(parsed_data_map[language]['Arm']);
 
     var headerHTML = `<span class="close" onclick="modalClose('bodyModal')">&times;</span>
                       <img src="images/body.png" id="figure" usemap="#body_figure">

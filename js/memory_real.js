@@ -20,8 +20,7 @@ function buildImages(gameSize, language) {
         data: {functionname: 'generate_images', arguments: [language]},
 
         success: function (data) {
-            console.log("I get here: " + data);
-            //buildGame(gameSize, language, images);
+            buildGame(gameSize, language, images);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus); 
