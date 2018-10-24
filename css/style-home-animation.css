@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
-#home {
-	background-image: url("images/home page art.jpg"); 
-}
-
 #animation {
   text-align:center;
   /*background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);*/
@@ -12,12 +8,15 @@
   font-weight:300;
   font-size:32px;
   padding-top:40vh;
-  margin-top:0.5em; 
+  margin-top:0.5em;
   height:100vh;
   overflow:hidden;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0,0,0);
+	background-image: url('../images/home_page_art.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /*#animation div {
@@ -31,86 +30,90 @@
 #word-1 {
   position:absolute;
   top:10px;
-  left:50px; 
+  left:50px;
 }
 
 #word-2 {
   position:absolute;
   top:110px;
-  left:100px; 
+  left:100px;
 }
 
 #word-3 {
   position:absolute;
   top:60px;
-  left:500px; 
+  left:500px;
 }
 
 #word-4 {
   position:absolute;
   top:170px;
-  left:650px; 
+  left:650px;
 }
 
 #word-5 {
   position:absolute;
   top:220px;
-  left:50px; 
+  left:50px;
 }
 
 #word-6 {
   position:absolute;
   top:320px;
-  left:200px; 
+  left:200px;
 }
 
 #word-7 {
   position:absolute;
   top:320px;
-  left:750px; 
+  left:750px;
 }
 
 #word-8 {
   position:absolute;
   top:245px;
-  left:500px; 
+  left:500px;
 }
 
 #word-9 {
   position:absolute;
   top:420px;
-  left:50px; 
+  left:50px;
 }
 
 #word-10 {
   position:absolute;
   top:420px;
-  left:450px; 
+  left:450px;
 }
 
 #word-11 {
   position:absolute;
   top:420px;
-  left:850px; 
+  left:850px;
 }
 
 #word-12 {
   position:absolute;
   top:10px;
-  left:850px; 
+  left:850px;
 }
 
 #animation div {
   display:inline-block;
   overflow:hidden;
   white-space:nowrap;
- 
+
 }
 
 
 
+<<<<<<< HEAD
 #animation #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12{  
   
+=======
+#animation #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12{
+>>>>>>> ecfa52a5290e4d5b995838549747922b26df40dd
   animation: showup 7s infinite;
 }
 
@@ -129,21 +132,21 @@
 #s1, #s6, #s9, #s12{
   margin-left:-355px;
   animation: slidein 7s infinite;
-   
-     
+
+
 }
 
 #s2, #s3, #s7, #s10{
   margin-left:-355px;
   animation: slidein 10s infinite;
-     
+
 }
 
 
 #s4, #s5, #s8, #s11{
   margin-left:-355px;
   animation: slidein 18s infinite;
-     
+
 }
 
 @keyframes showup {
@@ -174,4 +177,3 @@
   color:#999;
   margin-top:200px;
 }
-
