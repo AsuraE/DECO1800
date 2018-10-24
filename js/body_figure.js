@@ -1,4 +1,4 @@
-function buildFigure() {
+function buildFigure(language) {
     var headerHTML = `<span class="close" onclick="modalClose('bodyModal')">&times;</span>
                       <img src="images/body.png" id="figure" usemap="#body_figure">
                       <map name="body_figure">
@@ -30,7 +30,7 @@ function buildFigure() {
 
 
     `;
-    $(".bodyContent").html(headerHTML);
+    $(".figureContent").html(headerHTML);
     $('map').imageMapResize();
     
 }
