@@ -230,13 +230,16 @@ function advanceQuiz() {
   before advancing
   */
   if (clickEvent == 0) {
-    alert("Please pick the correct answer");
+    document.getElementById("question").style.fontSize = "35px";
+    document.getElementById("question").style.color = "red";
     return 2;
   }
 
   questionCounter++;
   createQuiz(questionCounter, language);
   clickEvent = 0;
+  document.getElementById("question").style.fontSize = null;
+  document.getElementById("question").style.color = null;
   return 0;
 }
 
