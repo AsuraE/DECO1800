@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/memory.css">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/imageMapResizer.min.js"></script>
+	<script src="js/body_figure.js"></script>
 </head>
 
 
@@ -59,7 +60,7 @@
 
 		<div id="gamebuttons">
 
-				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal')" class="button">
+				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal'); buildFigure();" class="button">
 				<img src="images/body.png" width=300px height=300px>
 				<p><br>Body part</p>
 				</button>
@@ -157,5 +158,4 @@
 </body>
 <script src="js/language.js"></script>
 <script src="js/memory_real.js"></script>
-<script src="js/body_figure.js"></script>
 </html>
