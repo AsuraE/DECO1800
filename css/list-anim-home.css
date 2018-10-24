@@ -1,0 +1,38 @@
+
+
+
+#animation { 
+  	background-image: url('../images/home_art.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+  text-align: center;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 { font-size: 8vw; }
+
+.linear-wipe {
+  text-align: center;
+  
+  background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 7s linear infinite;
+}
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  /* The code for this animation was taken from this website (https://codemyui.com/animated-gradient-text-effect/) and adapted for use. */ 
