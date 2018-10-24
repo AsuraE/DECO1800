@@ -101,7 +101,7 @@ body, #lang-ind {
 
 #signin {
 	margin:1em;
-	
+
 }
 
 #signin a {
@@ -116,20 +116,20 @@ body, #lang-ind {
 	border-radius: 8px;
 	color:white;
 	text-decoration:none;
-	border-radius:30px; 
+	border-radius:30px;
 }
 
 
 #lang-ind header, #lang header, #learn header, #about header {
 	display: flex;
 	flex-direction: row;
-	background-color:rgba(255, 255, 255, 0.5); 
+	background-color:rgba(255, 255, 255, 0.5);
 }
- 
+
 #home header {
 	display: flex;
 	flex-direction: row;
-	background-color:rgba(255, 255, 255, 0.5); 
+	background-color:rgba(255, 255, 255, 0.5);
 }
 
 /*Language landing page */
@@ -159,7 +159,7 @@ body, #lang-ind {
 
 
 #lang-header {
-	margin: 2em; 
+	margin: 2em;
 }
 
 
@@ -235,16 +235,16 @@ body, #lang-ind {
 	font-family: 'Patrick Hand', cursive;
 	color: #8F2F23;
 	font-weight:bold;
-	text-align:center; 
-	font-size: 28px; 
+	text-align:center;
+	font-size: 28px;
 }
 
 .hello-ind {
- 
+
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
-	
-	
+
+
 }
 
 .record {
@@ -294,6 +294,10 @@ body, #lang-ind {
 #learn {
 	display: block;
 	/*margin-top: 5em;*/
+}
+
+.button {
+	background-color: #BBA084;
 }
 
 /* The Modal (background) */
@@ -356,6 +360,7 @@ body, #lang-ind {
 .startQuiz {
 	width: 30%;
 	margin: auto;
+	background-color: #BBA084;
 }
 #quizName {
 	padding-bottom:1em;
@@ -434,6 +439,15 @@ body, #lang-ind {
 	cursor: pointer;
 }
 
+@keyframes shake {
+	0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }
+}
+
 /*Color of the body parts pop-up */
 #bodyModal .bodyContent {
 	background-color: #BBA084;
@@ -480,34 +494,31 @@ body, #lang-ind {
     height: 90%;
 }
 
-
-
 /*About us page */
 
 #about h1 {
-	padding: 1.5em; 
+	padding: 1.5em;
 	font-family: 'Patrick Hand', cursive;
 	color: #8F2F23;
 	font-weight:bold;
-	font-size:28px; 
-	
+	font-size:28px;
+
 }
 
 #about p {
-	padding:0.5em; 
+	padding:0.5em;
 	font-family: 'Patrick Hand', sans-serif, cursive;
 	color: #3E1B14;
 	font-size:20px;
 }
 
 #about-page {
-	padding: 1em; 
-	display:flex; 	
+	padding: 1em;
+	display:flex;
 }
 
 #team, #project {
-	width:50%; 
-	padding:0.5em; 
-	
-}
+	width:50%;
+	padding:0.5em;
 
+}
