@@ -12,6 +12,7 @@
   font-weight:300;
   font-size:32px;
   padding-top:40vh;
+  margin-top:0.5em; 
   height:100vh;
   overflow:hidden;
   -webkit-backface-visibility: hidden;
