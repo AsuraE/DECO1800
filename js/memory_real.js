@@ -20,7 +20,7 @@ function buildImages(gameSize, language) {
         data: {functionname: 'generate_images', arguments: [language]},
 
         success: function (data) {
-            buildGame(gameSize, language, images);
+            buildGame(gameSize, language, data);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) { 
             console.log("Status: " + textStatus); 
@@ -38,49 +38,51 @@ function buildImages(gameSize, language) {
 function buildGame(gameSize, language, images) {
     buildHTML(gameSize, language, images);
 
-    card = $(".card");
-    cards = [...card];
-    deck = $(".card-deck");
-    moves = 0;
-    counter = $(".moves");
-    stars = $(".fa-star");
-    matchedCards = $(".match");
-    starsListElement = $(".stars li");
-    close = $(".close");
-    winModal = $("#popup1");
-    flippedCards = Array();
-    second = 0, minute = 0; hour = 0;
-    timer = $(".timer");
-    interval;
+    // card = $(".card");
+    // cards = [...card];
+    // deck = $(".card-deck");
+    // moves = 0;
+    // counter = $(".moves");
+    // stars = $(".fa-star");
+    // matchedCards = $(".match");
+    // starsListElement = $(".stars li");
+    // close = $(".close");
+    // winModal = $("#popup1");
+    // flippedCards = Array();
+    // second = 0, minute = 0; hour = 0;
+    // timer = $(".timer");
+    // interval = 0;
 
-    cards = shuffle(cards);
+    // cards = shuffle(cards);
 
-    // Strip all classes from each card, setting game to default state
-    for (var i = 0; i < cards.length; i++) {
-        deck.html("");
-        [].forEach.call(cards, function(item) {
-            deck.append(item);
-        });
-        cards[i].classList.remove("show", "open", "match", "disabled");
-    }
+    // // Strip all classes from each card, setting game to default state
+    // for (var i = 0; i < cards.length; i++) {
+    //     deck.html("");
+    //     [].forEach.call(cards, function(item) {
+    //         deck.append(item);
+    //     });
 
-    // Set moves to 0
-    moves = 0;
-    counter.html(moves);
+        
+    //     cards[i].classList.remove("show", "open", "match", "disabled");
+    // }
 
-    // Set rating to default
-    for (var i = 0; i < stars.length; i++) {
-        stars[i].style.color = "#FFD700";
-        stars[i].style.visibility = "visible";
-    }
+    // // Set moves to 0
+    // moves = 0;
+    // counter.html(moves);
 
-    // Set time to default
-    second = 0;
-    minute = 0; 
-    hour = 0;
-    var timer = $(".timer");
-    timer.html("0 mins 0 secs");
-    clearInterval(interval);
+    // // Set rating to default
+    // for (var i = 0; i < stars.length; i++) {
+    //     stars[i].style.color = "#FFD700";
+    //     stars[i].style.visibility = "visible";
+    // }
+
+    // // Set time to default
+    // second = 0;
+    // minute = 0; 
+    // hour = 0;
+    // var timer = $(".timer");
+    // timer.html("0 mins 0 secs");
+    // clearInterval(interval);
 
     // Adds event listeners to each card
 }
@@ -245,23 +247,19 @@ function playAgain(){
  * the shuffles may not "appear" random to human players. If this turns out to
  * be a problem, this function will need to be changed to be less random.
  */
-function shuffle(cards) {
-    var cardOnePos, cardTwoPos, tempPos = 0;
-    // Shuffle the cards between 1 and 100 times
-    var shuffles = Math.floor(Math.random() * 100);
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
 
-    for (shuffles; shuffles > 0; shuffles--) {
-        // Pick two random cards in the deck
-        cardOnePos = Math.floor(Math.random() * cards.length);
-        cardTwoPos = Math.floor(Math.random() * cards.length);
-        // Swap these two cards with via an intermediate var
-        tempPos = cards[cardOnePos];
-        cards[cardOnePos] = deck[cardTwoPos];
-        cards[cardTwoPos] = tempPos;
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
     }
 
-    return cards;
-}
+    return array;
+};
 
 /*
  * Creates the list elements that will form the memory cards for the game.
@@ -273,6 +271,7 @@ function shuffle(cards) {
 function buildHTML(gameSize, language, images) {
     // Build the header for the memory HTML content
     var memoryHTML = `
+    <span class="close" onclick="modalClose('memModal')">&times;</span>
         <div class="container">
             <section class="score-panel">
                 <ul class="stars">
@@ -281,9 +280,7 @@ function buildHTML(gameSize, language, images) {
                     <li><i class="fa fa-star"></i></li>
                 </ul>
 
-                <span class="moves">0</span> Move(s)
-
-                <div class="timer">
+                <span class="moves">0</span> Move(s)<div class="timer">
                 </div>
 
                 <div class="restart" onclick=startGame()>
@@ -300,7 +297,7 @@ function buildHTML(gameSize, language, images) {
 
         var cardHTML = `
             <li class="card" type="` + cardType + `">
-                <img src="` + images[cardType] + `" height="42" width="42">
+                <img src="` + images[cardType] + `" height="140" width="140">
             </li>
         `;
 
@@ -328,11 +325,12 @@ function buildHTML(gameSize, language, images) {
                 </div>
             </div>
         </div>
+    <script src="js/memory.js"></script>
     `;
 
     memoryHTML += footerHTML;
 
     // Load memory html into the div with id = memContent
-    $('#memContent').html(memoryHTML);
+    $('.memoryContent').html(memoryHTML);
 }
 
