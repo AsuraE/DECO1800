@@ -80,7 +80,7 @@ var questions = [{
     [13, 12, 2, 5]
   ]
 }, {
-  image: "./images/memory_game/dingo.png",
+  image: "./images/memory_game/dingo wild dog.png",
   question: "Dingo/Wild Dog", //3
   choices: [
     [3, 5, 13, 2],
@@ -179,7 +179,7 @@ var questions = [{
     [12, 13, 2, 5]
   ]
 }, {
-  image: "./images/memory_game/sugarglider.png",
+  image: "./images/memory_game/sugar glider.png",
   question: "Sugar Glider", //14
   choices: [
     [10, 14, 6, 12],
