@@ -3,13 +3,15 @@
 <title>DreamTime - Learn</title>
 <head>
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/memory.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style-visual.css">
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="css/memory.css">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/imageMapResizer.min.js"></script>
+	<script src="js/data_fetcher.js"></script>
+	<script src="js/body_figure.js"></script>
 </head>
 
 
@@ -59,7 +61,7 @@
 
 		<div id="gamebuttons">
 
-				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal')" class="button">
+				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal');showFigure();" class="button">
 				<img src="images/body.png" width=300px height=300px>
 				<p><br>Body part</p>
 				</button>
@@ -77,18 +79,13 @@
 		</div>
 
           <div id="bodyModal" class="modal">
-            <div class="bodyContent">
-              <span class="close" onclick="modalClose('bodyModal')">&times;</span>
-              <div id="figureContent"></div>
-            </div>
+            <div class="figureContent"></div>
           </div>
 
           <!--memory_game pop-up-->
 
           <div id="memModal" class="modal">
-            <div class="bodyContent">
-              <span class="close" onclick="modalClose('memModal')">&times;</span>
-              <div id="memContent"></div>
+            <div class="memoryContent">
             </div>
           </div>
 
@@ -133,7 +130,7 @@
 
 								<img id="quizImg" src="" width="200px" height="200px">
 								<p id="engWord">English name</p>
-								<p>Choose the correct answer</p>
+								<p id="question">Choose the correct answer</p>
 
 								<div id="quizContainer">
 								</div>
@@ -157,5 +154,4 @@
 </body>
 <script src="js/language.js"></script>
 <script src="js/memory_real.js"></script>
-<script src="js/body_figure.js"></script>
 </html>

@@ -1,3 +1,8 @@
+$(document).ready(get_parsed_data());
+$(document).ajaxStop(function(){
+    fill_page(parsed_data_map);
+});
+
 function fill_page(parsed_data_map)
 {
     // Array(Language Name => Map(English=>Indigenous))
@@ -25,3 +30,4 @@ function fill_page(parsed_data_map)
         }
     });
 }
+

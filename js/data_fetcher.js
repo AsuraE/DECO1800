@@ -1,9 +1,3 @@
-$(document).ready(get_parsed_data());
-$(document).ajaxStop(function(){
-    fill_page(parsed_data_map);
-});
-
-
 var parsed_data_map = new Map();
 
 /**
@@ -22,7 +16,7 @@ function get_parsed_data()
 */
 function get_resource_ids()
 {
-    var resource_ids_map = new Object();       
+    var resource_ids_map = new Map();       
 
     $.ajax({
         url: "https://data.gov.au/api/3/action/package_show?id=fa0667b1-9e0d-4aef-baa1-e20357a769b6",
@@ -60,14 +54,26 @@ function parse_datasets(resource_ids_map)
         cache: true,
         success: function(data) {
             var language_map = new Map();
+            // Necessary for inconsistencies in data set
+            if (language_name == "Turubal") {
+                    language_name = "Turubul";
+            }
             // Datasets are ordered so that English is column 1 and indigenous is column 2
             // A better solution would be to regex the language name to the column name to ensure
             // a match without relying on this assumption, but that's restricted by time at the moment
             $.each(data.result.records, function(record_index, record_value) {
+
                 language_map[record_value["English"]] = record_value[language_name];
             });
             parsed_data_map[language_name] = language_map;
         }
         });
     });
+}
+
+/**
+  *  Getter for parsed data map. 
+  */
+function get_parsed_data_map() {
+    return parsed_data_map;
 }

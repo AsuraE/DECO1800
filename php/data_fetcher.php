@@ -84,7 +84,8 @@ Class DataFetcher
     }
 
     public function get_parsed_data() 
-    {
+    {   
+        var_dump($parsed_data_map);
         return $parsed_data_map;
     }
 }
