@@ -197,7 +197,7 @@ function iterateRecords5(data) {
 		var recordID = recordValue["_id"]; 
 		console.log(recordID);
 		if (recordID=="72" && language=="Yugambeh") {
-			alert (recordGreeting); 
+			 
 			$("#hello-indig").append(
 				$('<section class ="hello-ind">').append(
 					$('<p>').text(recordGreeting)
@@ -319,8 +319,7 @@ if (language=='Yuggera') {
     dataType: 'jsonp',
 	cache:true, 
     success: function(data) {
-      alert('Total results found: ' + data.result.total);
-	  iterateRecords5(data);
+      iterateRecords5(data);
 	  
     }
   });

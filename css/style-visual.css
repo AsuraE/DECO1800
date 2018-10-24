@@ -199,9 +199,12 @@ body, #lang-ind {
 	width:100%;
 	padding-bottom:2em;
 
+}
 
-
-
+#langMain h2, h3 {
+	font-family: 'Patrick Hand', cursive;
+	color: #8F2F23;
+	font-weight:bold;
 }
 
 #lang-ind .word_list_but {
@@ -222,6 +225,14 @@ body, #lang-ind {
 
 #langMain #hello {
 	text-align:center;
+}
+
+#hello-indig {
+	font-family: 'Patrick Hand', cursive;
+	color: #8F2F23;
+	font-weight:bold;
+	text-align:center; 
+	font-size: 28px; 
 }
 
 .hello-ind {
