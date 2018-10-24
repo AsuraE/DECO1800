@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
     <link rel="stylesheet" href="css/memory.css">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/imageMapResizer.min.js"></script>
 </head>
 
 
@@ -78,9 +79,7 @@
           <div id="bodyModal" class="modal">
             <div class="bodyContent">
               <span class="close" onclick="modalClose('bodyModal')">&times;</span>
-              <p>body img part</p>
-
-              <img src="images/body.png" id="figure">
+              <div id="figureContent"></div>
             </div>
           </div>
 
@@ -158,4 +157,5 @@
 </body>
 <script src="js/language.js"></script>
 <script src="js/memory_real.js"></script>
+<script src="js/body_figure.js"></script>
 </html>
