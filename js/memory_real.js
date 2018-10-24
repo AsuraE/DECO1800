@@ -10,18 +10,23 @@ $(document).ready(buildImages(16, sessionStorage.getItem('language')));
  */
 function buildImages(gameSize, language) {
     var totalImages = gameSize / 2;
-
+    language = "Turubul";
     // Create an AJAX request to the server in order to build the images using image_builder.php
     // Retuned data will be JSON of list of images created on server
     jQuery.ajax({
         type: "POST",
-        url: 'php/image_builder.php',
+        url: 'php/memory_image_builder.php',
         dataType: 'json',
-        data: {functionname: 'build_images', arguments: [totalImages, language]},
+        data: {functionname: 'generate_images', arguments: [language]},
 
         success: function (data) {
-                buildGame(gameSize, language, images);
-        }
+            console.log("I get here: " + data);
+            //buildGame(gameSize, language, images);
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            console.log("Status: " + textStatus); 
+            console.log("Error: " + errorThrown); 
+        }     
     });
 }
 
