@@ -54,7 +54,7 @@
 
 		<div id="gamebuttons">
 
-				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal');showFigure();" class="button">
+				<button type="button" id="bodyButton" onclick="modalOpen('bodyModal');" class="button">
 				<img src="images/body.png" width=300px height=300px>
 				<p><br>Body part</p>
 				</button>
@@ -69,11 +69,40 @@
 				 <p><br>Quiz</p>
 				</button>
 
-		</div>
+        </div>
+            <div id="bodyModal" class="modal">
+                <div class="figureContent">
+                	<div id="start">
+    					<p>Test Your Knowledge!</p>
 
-          <div id="bodyModal" class="modal">
-            <div class="figureContent"></div>
-          </div>
+    					<p id="quizName">Choose the Language</p>
+
+    					<div id="selectLang">
+
+    						<button type="button" class="startQuiz" onclick="startFigure(`Yuggera`);showFigure();" name="Start quiz">
+    						<img src="./images/art1.jpg" width="200px" height="200px">
+    						<p>Yugara</p>
+    						</button>
+
+    						<button type="button" class="startQuiz" onclick="startFigure(`Yugarabul`);showFigure();" name="Start quiz">
+    						<img src="./images/language.jpg" width="200px" height="200px">
+    						<p>Yugarabul</p>
+    						</button>
+
+    						<button type="button" class="startQuiz" onclick="startFigure(`Yugambeh`);showFigure();" name="Start quiz">
+    						<img src="./images/art8.jpg" width="200px" height="200px">
+    						<p>Yugambeh</p>
+    						</button>
+
+    						<button type="button" class="startQuiz" onclick="startFigure(`Turubul`);showFigure();" name="Start quiz">
+    						<img src="./images/art2.jpg" width="200px" height="200px">
+    						<p>Turubul</p>
+    						</button>
+
+    					</div>
+    				</div>
+                </div>
+            </div>
 
           <!--memory_game pop-up-->
 

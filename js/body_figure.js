@@ -1,12 +1,7 @@
 $(document).ready(get_parsed_data());
-$(document).ajaxStop(function(){
-    buildFigure(parsed_data_map, language);
-});
 
 function buildFigure(parsed_data_map, language) {
-    language = 'Turubul';
-
-    var headerHTML = `<span class="close" onclick="modalClose('bodyModal')">&times;</span>
+    var headerHTML = `<span class="close" onclick="modalClose('bodyModal');resetFigure();">&times;</span>
                       <div style="font-size:30px;"> Language: ` + language + `</div>
                       <img src="images/body.png" id="figure" usemap="#body_figure">
                       <map name="body_figure">
@@ -38,6 +33,44 @@ function buildFigure(parsed_data_map, language) {
     $(".figureContent").html(headerHTML);
 }
 
+function startFigure(language) {
+    // get_parsed_data();
+    buildFigure(parsed_data_map, language);
+}
+
 function showFigure() {
     $('map').imageMapResize();
+}
+
+function resetFigure() {
+    var headerHTML = `<div id="start">
+              <p>Test Your Knowledge!</p>
+
+              <p id="quizName">Choose the Language</p>
+
+              <div id="selectLang">
+
+                <button type="button" class="startQuiz" onclick="startFigure('Yuggera');showFigure();" name="Start quiz">
+                <img src="./images/art1.jpg" width="200px" height="200px">
+                <p>Yugara</p>
+                </button>
+
+                <button type="button" class="startQuiz" onclick="startFigure('Yugarabul');showFigure();" name="Start quiz">
+                <img src="./images/language.jpg" width="200px" height="200px">
+                <p>Yugarabul</p>
+                </button>
+
+                <button type="button" class="startQuiz" onclick="startFigure('Yugambeh');showFigure();" name="Start quiz">
+                <img src="./images/art8.jpg" width="200px" height="200px">
+                <p>Yugambeh</p>
+                </button>
+
+                <button type="button" class="startQuiz" onclick="startFigure('Turubul');showFigure();" name="Start quiz">
+                <img src="./images/art2.jpg" width="200px" height="200px">
+                <p>Turubul</p>
+                </button>
+
+              </div>
+            </div>`;
+    $(".figureContent").html(headerHTML);
 }
