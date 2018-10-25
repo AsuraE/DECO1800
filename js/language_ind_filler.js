@@ -39,12 +39,12 @@ people_array['Yugambeh']='Billy Drumley (Indigenous community leader), Ellen van
 
 /*Data for Turubul */
 
-location_array['Turubal']= 'Brisbane area north to Caboolture and the Sunshine Coast.';
+location_array['Turubul']= 'Brisbane area north to Caboolture and the Sunshine Coast.';
 
-language_array['Turubal'] = 'Linguistic research, including AUSTLANG and AIATSIS indicate there is some uncertainty around Turubal including whether it refers to a dialect or a group within the North Brisbane Region. Historical documentation from settlers, missionaries and others record words from Turubul since the 1840s. There are shared words between Turubul and neighbouring languages of Kabi Kabi to the north and Yugara / Yuggera to the south.';
+language_array['Turubul'] = 'Linguistic research, including AUSTLANG and AIATSIS indicate there is some uncertainty around Turubal including whether it refers to a dialect or a group within the North Brisbane Region. Historical documentation from settlers, missionaries and others record words from Turubul since the 1840s. There are shared words between Turubul and neighbouring languages of Kabi Kabi to the north and Yugara / Yuggera to the south.';
 
 
-people_array['Turubal']='Uncle Joe Kirk (Turubal Elder).';
+people_array['Turubul']='Uncle Joe Kirk (Turubal Elder).';
 
 
 
@@ -218,7 +218,7 @@ function iterateRecords5(data) {
 					$('<p>').text(recordGreeting)
 						)
 			);
-		} else if (recordID=="57" && language=="Turubal") {
+		} else if (recordID=="57" && language=="Turubul") {
 			$("#hello-indig").append(
 				$('<section class ="hello-ind">').append(
 					$('<p>').text(recordGreeting)
@@ -287,7 +287,7 @@ if (language=='Yuggera') {
       iterateRecords3(data);
     }
   });
-} else if (language=='Turubal') {
+} else if (language=='Turubul') {
 	var data = {
     resource_id: 'da3ac749-840a-479d-9466-09eb8d6e389d',
     limit: 50
