@@ -1,4 +1,4 @@
-$(document).ready(buildImages(16, sessionStorage.getItem('language')));
+$(document).ready(get_parsed_data());
 /*
  * Makes an AJAX request to the server to dynamically build images for the memory game
  * from the dataset. 
@@ -8,9 +8,9 @@ $(document).ready(buildImages(16, sessionStorage.getItem('language')));
  * 
  * Creates images on server and returns their filepaths as an array
  */
-function buildImages(gameSize, language) {
+function buildImages(language) {
+    var gameSize = 16;
     var totalImages = gameSize / 2;
-    language = "Turubul";
     // Create an AJAX request to the server in order to build the images using image_builder.php
     // Retuned data will be JSON of list of images created on server
     jQuery.ajax({
@@ -39,7 +39,7 @@ function buildImages(gameSize, language) {
 function buildHTML(gameSize, language, images) {
     // Build the header for the memory HTML content
     var memoryHTML = `
-    <span class="close" onclick="modalClose('memModal')">&times;</span>
+    <span class="close" onclick="modalClose('memModal');">&times;</span>
         <div class="container">
         <div style="font-size:30px;"> Language: ` + language + `
             <section class="score-panel">
@@ -113,6 +113,39 @@ function buildHTML(gameSize, language, images) {
  */
 function buildGame(gameSize, language, images) {
     buildHTML(gameSize, language, images);
+}
+
+function resetMemory() {
+    var headerHTML = `<div id="start">
+                    <p>Hope You Don't Have Alzheimers</p>
+
+                    <p id="quizName">Choose the Language</p>
+
+                    <div id="selectLang">
+
+                        <button type="button" class="startQuiz" onclick="buildImages('Yugara');" name="Start quiz">
+                        <img src="./images/art1.jpg" width="200px" height="200px">
+                        <p>Yugara</p>
+                        </button>
+
+                        <button type="button" class="startQuiz" onclick="buildImages('Yugarabul');" name="Start quiz">
+                        <img src="./images/language.jpg" width="200px" height="200px">
+                        <p>Yugarabul</p>
+                        </button>
+
+                        <button type="button" class="startQuiz" onclick="buildImages('Yugambeh');" name="Start quiz">
+                        <img src="./images/art8.jpg" width="200px" height="200px">
+                        <p>Yugambeh</p>
+                        </button>
+
+                        <button type="button" class="startQuiz" onclick="buildImages('Turubul');" name="Start quiz">
+                        <img src="./images/art2.jpg" width="200px" height="200px">
+                        <p>Turubul</p>
+                        </button>
+
+                    </div>
+                </div>`;
+    $('.memoryContent').html(headerHTML);
 }
 
 //     // card = $(".card");

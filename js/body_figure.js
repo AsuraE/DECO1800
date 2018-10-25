@@ -44,7 +44,7 @@ function showFigure() {
 
 function resetFigure() {
     var headerHTML = `<div id="start">
-              <p>Test Your Knowledge!</p>
+              <p>Check Dat Body Out!</p>
 
               <p id="quizName">Choose the Language</p>
 

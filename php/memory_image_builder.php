@@ -16,8 +16,28 @@
     error_reporting(E_ALL);
     //Set the Content Type
     //header('Content-type: image/jpeg');
-    $json = generate_images("Turubul");
+    // $json = generate_images("Turubul");
     // echo var_dump($json);
+
+
+
+    $aResult = array();
+
+    if( !isset($_POST['functionname']) ) { $aResult['error'] = 'No function name!'; }
+    if( !isset($_POST['arguments']) ) { $aResult['error'] = 'No function arguments!'; }
+    if( !isset($aResult['error']) ) {
+
+        switch($_POST['functionname']) {
+            case 'generate_images':
+               $json = generate_images($_POST['arguments'][0]);
+               break;
+
+            default:
+               $aResult['error'] = 'Not found function '.$_POST['functionname'].'!';
+               echo json_encode($aResult);
+               break;
+        }
+    }
 
     function generate_images($language) {
         // Grab the animals from the language we want

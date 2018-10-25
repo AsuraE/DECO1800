@@ -6,7 +6,6 @@ function get_animal_wordlist($language)
     ini_set("display_errors", 1);
     error_reporting(E_ALL ^ E_NOTICE);
 
-
     $url = "https://data.gov.au/api/3/action/datastore_search?resource_id=3e39dd7d-e777-4f47-9160-95aaca34bff5";
     $response = file_get_contents($url);
     $data = json_decode($response, true);
