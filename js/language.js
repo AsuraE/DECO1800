@@ -209,7 +209,7 @@ start quiz
 function startQuiz(languageIndex) {
   document.getElementById("quiz").style.display="block";
   document.getElementById("quiz").style.visibility="visible";
-  document.getElementById("start").style.display="none";
+  document.getElementById("startQuiz").style.display="none";
   language = languageIndex;
   createQuiz(questionCounter, language);
 }

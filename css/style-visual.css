@@ -33,7 +33,7 @@ body, #lang-ind {
 #logo img{
 	margin-left: 0;
 	width: 30%;
-	padding:5px;  
+	padding:5px;
 }
 
 /*Homepage picture*/
@@ -148,7 +148,7 @@ body, #lang-ind {
 }
 
 #languages img {
-	
+
 	border-color:#8F2F23;
 	padding:1em;
 
@@ -366,18 +366,18 @@ body, #lang-ind {
 	flex-basis: 200px;
 }
 
-#start {
+#startQuiz {
 	padding:1em;
 	padding-bottom:2em;
 	background-color: #ffcc66;
 }
 
-#start p {
+#startQuiz p {
 	margin-top: 1em;
 
 }
 
-#start p:first-child {
+#startQuiz p:first-child {
 	font-size:22px;
 }
 
