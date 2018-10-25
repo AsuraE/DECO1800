@@ -7,6 +7,7 @@ function buildFigure(parsed_data_map, language) {
     language = 'Turubul';
 
     var headerHTML = `<span class="close" onclick="modalClose('bodyModal')">&times;</span>
+                      <div style="font-size:30px;"> Language: ` + language + `</div>
                       <img src="images/body.png" id="figure" usemap="#body_figure">
                       <map name="body_figure">
                           <area data-toggle="tooltip" title="` + parsed_data_map[language]['Arm'] + `" class="arm" shape="circle" coords="906,673,50">

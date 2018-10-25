@@ -41,6 +41,7 @@ function buildHTML(gameSize, language, images) {
     var memoryHTML = `
     <span class="close" onclick="modalClose('memModal')">&times;</span>
         <div class="container">
+        <div style="font-size:30px;"> Language: ` + language + `
             <section class="score-panel">
                 <ul class="stars">
                     <li><i class="fa fa-star"></i></li>
